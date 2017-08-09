@@ -37,6 +37,11 @@ See also: [react-mobx-typescript-boilerplate](https://github.com/rokoroku/react-
 $ npm install
 ```
 
+### Firebase Tools
+```
+npm install -g firebase-tools
+```
+
 ## Running
 
 ```
