@@ -5,6 +5,7 @@ import { Router, Route, Switch } from 'react-router';
 import { createBrowserHistory } from 'history';
 import { configureStore } from './store';
 import { App } from './containers/App';
+require('../assets/manifest.json');
 
 const store = configureStore();
 const history = createBrowserHistory();

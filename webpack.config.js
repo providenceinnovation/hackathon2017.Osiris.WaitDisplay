@@ -9,7 +9,7 @@ var outPath = path.join(__dirname, './dist');
 // plugins
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-
+console.log('assets:' + path.resolve(__dirname, "assets"));
 module.exports = {
   context: sourcePath,
   entry: {
@@ -81,6 +81,18 @@ module.exports = {
       { test: /\.html$/, use: 'html-loader' },
       { test: /\.png$/, use: 'url-loader?limit=10000' },
       { test: /\.jpg$/, use: 'file-loader' },
+      {
+        test: /\.json$/,
+        include: [
+          path.resolve(__dirname, "assets"),
+        ],
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]'
+          },
+        }
+      }
     ],
   },
   plugins: [
