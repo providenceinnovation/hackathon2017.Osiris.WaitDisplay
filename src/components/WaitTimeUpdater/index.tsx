@@ -3,6 +3,7 @@ import * as style from './style.css';
 import * as realTimeManager from '../../utils/realTimeManager';
 import Slider from 'react-toolbox/lib/slider';
 import Switch from 'react-toolbox/lib/switch';
+import { WAIT_TIME, ACCEPTING_NOW } from '../../constants/realTimeServiceTypes';
 
 const PROVIDER_ID_DEFAULT:string = 'wa211134271';
 
@@ -42,14 +43,15 @@ export class WaitTimeUpdater extends React.Component<WaitTimeUpdater.Props, Wait
   componentDidMount () {
     realTimeManager.setupFirebase();
 
-    realTimeManager.getProvider(this.props.providerID).then((provider) => {
-      console.log(`WaitTimeUpdater:updating the state with the last server info:${JSON.stringify(provider)}`);
-      this.setState({...this.state, waitTime: provider.waitTime });
-      this.setState({...this.state, acceptingNow: provider.acceptingNow });
-    }).catch((reason) => {
-      console.error('Failed to retrieve the provider on the wait time updater:' + reason);
+    realTimeManager.startListener(this.props.providerID, WAIT_TIME, (updatedValue) => {
+      console.log('Updated wait time:' + JSON.stringify(updatedValue));
+      this.setState({...this.state, waitTime: updatedValue.value });
     });
 
+    realTimeManager.startListener(this.props.providerID, ACCEPTING_NOW, (updatedValue) => {
+      console.log('Updated accepting now:' + JSON.stringify(updatedValue));
+      this.setState({...this.state, acceptingNow: updatedValue.value });
+    });
   }
 
   render() {
