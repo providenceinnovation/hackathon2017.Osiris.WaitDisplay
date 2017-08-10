@@ -6,7 +6,7 @@ const PROVIDER_ID_DEFAULT:string = 'wa211134271';
 
 export namespace WaitTime {
   export interface Props {
-    // empty
+    providerID: string;
   }
 
   export interface State {
@@ -26,7 +26,7 @@ export class WaitTime extends React.Component<WaitTime.Props, WaitTime.State> {
   componentDidMount () {
     waitTimeUtils.setupFirebase();
 
-    waitTimeUtils.startListening(PROVIDER_ID_DEFAULT, (updatedTime) => {
+    waitTimeUtils.startListening(this.props.providerID || PROVIDER_ID_DEFAULT, (updatedTime) => {
       console.log('updated wait time:' + updatedTime);
       this.setState({waitTime: updatedTime});
     });

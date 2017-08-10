@@ -54,6 +54,23 @@ $ npm start
 $ npm run build
 ```
 
+# Test Wait Times
+
+Load the page with the default clinic.
+```
+http://localhost:3000/
+```
+
+Load the page with a specific clinic.
+```
+http://localhost:3000/?providerID=<value goes here>
+```
+
+Force an update using the Firebase console.
+```
+https://console.firebase.google.com/project/osiris-26b00/database/data/providers/wa211134271/waitTime
+```
+
 # License
 
 MIT

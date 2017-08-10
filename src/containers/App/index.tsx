@@ -22,10 +22,14 @@ export namespace App {
 export class App extends React.Component<App.Props, App.State> {
 
   render() {
+    // load the provider ID query string param
+    const params = new URLSearchParams(this.props.location.search);
+    const providerID = params.get('providerID');
+
     const { todos, todoActions, children } = this.props;
     return (
       <div className={style.normal}>
-        <WaitTime />
+        <WaitTime providerID={providerID} />
         {children}
       </div>
     );
