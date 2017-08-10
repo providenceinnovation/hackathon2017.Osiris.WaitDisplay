@@ -5,9 +5,9 @@ import { connect } from 'react-redux';
 import { RouteComponentProps } from 'react-router';
 import { RootState } from '../../reducers';
 import { WaitTimeUpdater } from '../../components';
-import * as waitTimeUtils from '../../utils/waitTime';
+import * as realTimeManager from '../../utils/realTimeManager';
 
-export namespace Updater {
+export namespace ControllerMulti {
   export interface Props extends RouteComponentProps<void> {
     /* empty */
   }
@@ -18,12 +18,12 @@ export namespace Updater {
 }
 
 @connect(mapStateToProps, mapDispatchToProps)
-export class Updater extends React.Component<Updater.Props, Updater.State> {
+export class ControllerMulti extends React.Component<ControllerMulti.Props, ControllerMulti.State> {
 
   render() {
     // load the provider ID query string param
     const params = new URLSearchParams(this.props.location.search);
-    const providerID = params.get('providerID') || waitTimeUtils.PROVIDER_ID_DEFAULT;
+    const providerID = params.get('providerID') || realTimeManager.PROVIDER_ID_DENTAL;
 
     const { children } = this.props;
     console.log('updater render');

@@ -5,7 +5,8 @@ import { Router, Route, Switch } from 'react-router';
 import { createBrowserHistory } from 'history';
 import { configureStore } from './store';
 import { App } from './containers/App';
-import { Updater } from './containers/Updater';
+import { ControllerOne } from './containers/ControllerOne';
+import { ControllerMulti } from './containers/ControllerMulti';
 
 require('../assets/manifest.json');
 
@@ -17,7 +18,8 @@ ReactDOM.render(
     <Router history={history}>
       <Switch>
         <Route exact path="/" component={App} />
-        <Route path="/updater" component={Updater} />
+        <Route path="/urgentCare" component={ControllerOne} />
+        <Route path="/dental" component={ControllerMulti} />
       </Switch>
     </Router>
   </Provider>,
