@@ -1,6 +1,5 @@
 import * as React from 'react';
 import * as TodoActions from '../../actions/todos';
-import * as WaitTimeActions from '../../actions/waittime';
 import * as style from './style.css';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -12,8 +11,6 @@ export namespace App {
   export interface Props extends RouteComponentProps<void> {
     todos: TodoItemData[];
     todoActions: typeof TodoActions;
-    waitTime: WaitTimeData;
-    waitTimeActions: typeof WaitTimeActions;
   }
 
   export interface State {
@@ -25,12 +22,10 @@ export namespace App {
 export class App extends React.Component<App.Props, App.State> {
 
   render() {
-    const { todos, todoActions, children, waitTime, waitTimeActions } = this.props;
+    const { todos, todoActions, children } = this.props;
     return (
       <div className={style.normal}>
-        <Header addTodo={todoActions.addTodo} />
-        <WaitTime waitTimeData={waitTime} actions={waitTimeActions} />
-        <MainSection todos={todos} actions={todoActions} />
+        <WaitTime />
         {children}
       </div>
     );
@@ -39,15 +34,12 @@ export class App extends React.Component<App.Props, App.State> {
 
 function mapStateToProps(state: RootState) {
   return {
-    todos: state.todos,
-    waitTime: state.waitTime
+    todos: state.todos
   };
 }
 
 function mapDispatchToProps(dispatch) {
-  console.log(WaitTimeActions);
   return {
-    todoActions: bindActionCreators(TodoActions as any, dispatch),
-    waitTimeActions: bindActionCreators(WaitTimeActions as any, dispatch)
+    todoActions: bindActionCreators(TodoActions as any, dispatch)
   };
 }

@@ -1,40 +1,42 @@
 import * as React from 'react';
-import { Dispatch } from 'react-redux';
-import * as WaitTimeActions from '../../actions/waittime';
 import * as style from './style.css';
-import { startListening } from '../../actions/waitTime';
+import * as waitTimeUtils from '../../utils/waitTime';
+
+const PROVIDER_ID_DEFAULT:string = 'wa211134271';
 
 export namespace WaitTime {
   export interface Props {
-    waitTimeData: WaitTimeData;
-    actions: typeof WaitTimeActions;
+    // empty
   }
 
   export interface State {
-    /* empty */
+    waitTime: string,
   }
 }
 
 export class WaitTime extends React.Component<WaitTime.Props, WaitTime.State> {
 
+
   constructor(props?: WaitTime.Props, context?: any) {
     super(props, context);
+
+    this.state = {waitTime: 'Not available'};
   }
 
   componentDidMount () {
-    // const { dispatch } = this.props
+    waitTimeUtils.setupFirebase();
 
-    //this.props.actions.startListening();
-    // dispatch(startListening())
-    Dispatch(startListening());
+    waitTimeUtils.startListening(PROVIDER_ID_DEFAULT, (updatedTime) => {
+      console.log('updated wait time:' + updatedTime);
+      this.setState({waitTime: updatedTime});
+    });
   }
 
   render() {
-    console.log('render waittime');
-    const { waitTimeData } = this.props;
+    const { waitTime } = this.state;
     return (
       <div className={style.main}>
-        {waitTimeData.waitTime}
+        {waitTime}
       </div>
     );
   }
