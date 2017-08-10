@@ -1,3 +1,9 @@
 .main {
   color: red;
+  font-family: 'Aldrich', sans-serif;
+  font-size: 64px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
 }

@@ -5,6 +5,7 @@ var path = require('path');
 var isProduction = process.argv.indexOf('-p') >= 0;
 var sourcePath = path.join(__dirname, './src');
 var outPath = path.join(__dirname, './dist');
+var assetsPath = path.join(__dirname, 'assets');
 
 // plugins
 var HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -84,7 +85,7 @@ module.exports = {
       {
         test: /\.json$/,
         include: [
-          path.resolve(__dirname, "assets"),
+          assetsPath,
         ],
         use: {
           loader: 'file-loader',
@@ -92,7 +93,7 @@ module.exports = {
             name: '[name].[ext]'
           },
         }
-      }
+      },
     ],
   },
   plugins: [
