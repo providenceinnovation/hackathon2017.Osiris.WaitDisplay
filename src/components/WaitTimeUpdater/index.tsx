@@ -61,7 +61,10 @@ export class WaitTimeUpdater extends React.Component<WaitTimeUpdater.Props, Wait
           value={waitTime}
           onChange={this.handleSliderChange.bind(this, 'waitTime')}
           snaps={true}
-          step={5} />
+          step={5}
+          editable
+          min={0}
+          max={120} />
         <p>Accepting New Patients</p>
         <Switch
           checked={acceptingNow}
