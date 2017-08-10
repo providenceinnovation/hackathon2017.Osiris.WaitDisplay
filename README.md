@@ -54,6 +54,13 @@ $ npm start
 $ npm run build
 ```
 
+## Build and Deploy to Firebase Hosting Services
+
+```
+$ npm run deploy
+```
+
+
 # Test Wait Times
 
 Load the page with the default clinic.
