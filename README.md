@@ -78,6 +78,13 @@ Force an update using the Firebase console.
 https://console.firebase.google.com/project/osiris-26b00/database/data/providers/wa211134271/waitTime
 ```
 
+# Deploy firebase function(s)
+
+```
+firebase deploy --only functions
+```
+
+
 # License
 
 MIT
