@@ -64,9 +64,9 @@ export class NumberCounterUpdater extends React.Component<NumberCounterUpdater.P
       <div className={style.main}>
         <span className={style.description}>{this.props.description}</span>
         <div className={style.controlContainer}>
-          <Button className={style.controlButton} icon='add' floating mini onClick={this.handleAdd} />
-          <span className={style.controlValue}>{controlValue}</span>
           <Button className={style.controlButton} icon='remove' floating mini onClick={this.handleRemove} />
+          <span className={style.controlValue}>{controlValue}</span>
+          <Button className={style.controlButton} icon='add' floating mini onClick={this.handleAdd} />
         </div>
       </div>
     );

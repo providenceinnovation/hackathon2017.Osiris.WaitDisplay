@@ -54,6 +54,15 @@ body {
   background-color: white;
 }
 
+.componentContainer > hr {
+  flex-flow: row;
+  border-top: 1px solid #8c8b8b;
+  background-color: #8c8b8b;
+  text-align: center;
+  margin: 10px auto 0 auto;
+  width: 100%;
+}
+
 .componentHeader {
   display: flex;
   flex-flow: column;
@@ -72,6 +81,10 @@ body {
   align-items: flex-end;
 }
 
+.componentHeader > div:first-child {
+  margin-bottom: 10px;
+}
+
 .componentHeader img {
   margin-right: 10px;
 }
@@ -81,7 +94,8 @@ body {
   line-height: 24pt;
   letter-spacing: 0.9pt;
   font-weight: 300;
-  color: rgba(0 0 0 0.54);
+  color: rgba(0, 0, 0, 0.54);
+  margin-left: 15px;
 }
 
 .componentGrid {

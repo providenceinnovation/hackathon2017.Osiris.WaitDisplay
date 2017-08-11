@@ -12,9 +12,9 @@
   line-height: 24pt;
   letter-spacing: 0.9pt;
 
-  color: rgba(0 0 0 0.87);
+  color: rgba(0, 0, 0, 0.87);
 }
 
 .controlContainer {
-
+  margin-top: 16px;
 }

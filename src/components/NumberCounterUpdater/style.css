@@ -2,6 +2,7 @@
   display: flex;
   flex-flow: row;
   justify-content: space-around;
+  align-items: center;
 }
 
 .description {
@@ -11,16 +12,22 @@
   line-height: 24pt;
   letter-spacing: 0.9pt;
 
-  color: rgba(0 0 0 0.87);
+  color: rgba(0, 0, 0, 0.87);
 }
 
 .controlContainer {
+  align-items: center;
 }
 
 .controlValue {
   font-size: 24px;
   line-height: 32pt;
   letter-spacing: 0.5pt;
+
+  width: 36px;
+  display: inline-block;
+  margin: 0 5px 0 5px;
+  text-align: center;
 }
 
 .controlButton {
