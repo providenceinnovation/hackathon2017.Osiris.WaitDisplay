@@ -41,12 +41,12 @@ export class ToggleList extends React.Component<ToggleList.Props, ToggleList.Sta
   render() {
     const acceptedInsurances = this.state.toggleList.map((ai) => {
       console.log(ai);
-      return <div key={ai}>{ai}</div>;
+      return <div key={ai} className={style.insurance}>{ai}</div>;
     });
     const { toggleList } = this.state;
     return (
       <div className={style.main}>
-        {toggleList}
+        {acceptedInsurances}
       </div>
     );
   }
