@@ -1,4 +1,8 @@
 .insuranceCard {
-  background-color: lightblue;
-  min-width: 350px;
+  width: 45%;  /* Or whatever */
+  max-width: 45%;
+  margin: 10px 10px 0px 0px;
+  height: 100px; /* Or whatever */
+}
+.main {
 }
