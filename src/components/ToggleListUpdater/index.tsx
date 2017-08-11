@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as style from './style.css';
 import * as realTimeManager from '../../utils/realTimeManager';
-
+import { ToggleListItemUpdater } from '..';
 export namespace ToggleListUpdater {
   export interface Props {
     providerID: string;
@@ -45,13 +45,12 @@ export class ToggleListUpdater extends React.Component<ToggleListUpdater.Props, 
   render() {
     let acceptedInsurances = this.state.acceptedInsurance.map((ai) => {
       console.log(ai);
-      return <li key={ai}>{ai}</li>;
+      let serviceType = `acceptingInsurance/${ai}`;
+      return <ToggleListItemUpdater key={ai} providerID={this.props.providerID} serviceType={serviceType} description={ai}/>;
     });
     return (
         <div>
-        <ul>
-          {acceptedInsurances}
-        </ul>
+        {acceptedInsurances}
         </div>
 
     );
