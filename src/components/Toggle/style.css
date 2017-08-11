@@ -1,0 +1,16 @@
+.main {
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.available {
+  color: green;
+}
+
+.notAvailable {
+  color: red;
+}
