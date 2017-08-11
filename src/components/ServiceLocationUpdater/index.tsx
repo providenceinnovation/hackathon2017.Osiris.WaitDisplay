@@ -2,6 +2,7 @@ import * as React from 'react';
 import * as style from './style.css';
 // import * as realTimeManager from '../../utils/realTimeManager';
 import { NumberCounterUpdater } from '..';
+import { ToggleUpdater } from '..';
 
 /* Container for the updaters for a single service */
 export namespace ServiceLocationUpdater {
@@ -53,6 +54,7 @@ export class ServiceLocationUpdater extends React.Component<ServiceLocationUpdat
       <div className={style.main}>
         <h3>{this.props.providerName}</h3>
         {widgetComponents}
+        <ToggleUpdater providerID={this.props.providerID} serviceType="acceptingNow" description="Accepting now?" />
       </div>
     );
   }
