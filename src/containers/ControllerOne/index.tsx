@@ -28,7 +28,7 @@ export class ControllerOne extends React.Component<ControllerOne.Props, Controll
     const { children } = this.props;
     console.log('updater render');
     return (
-      <div className={style.normal}>
+      <div className={style.main}>
         <WaitTimeUpdater providerID={providerID} />
         {children}
       </div>

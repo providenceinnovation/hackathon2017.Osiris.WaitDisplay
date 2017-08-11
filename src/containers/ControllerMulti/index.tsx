@@ -4,9 +4,10 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { RouteComponentProps } from 'react-router';
 import { RootState } from '../../reducers';
-import { WaitTimeUpdater } from '../../components';
+import { ServiceLocationUpdater } from '../../components';
 import * as realTimeManager from '../../utils/realTimeManager';
 
+/* Container used to update for multiple services */
 export namespace ControllerMulti {
   export interface Props extends RouteComponentProps<void> {
     /* empty */
@@ -21,16 +22,21 @@ export namespace ControllerMulti {
 export class ControllerMulti extends React.Component<ControllerMulti.Props, ControllerMulti.State> {
 
   render() {
-    // load the provider ID query string param
-    const params = new URLSearchParams(this.props.location.search);
-    const providerID = params.get('providerID') || realTimeManager.PROVIDER_ID_DENTAL;
+    const providerList = [
+      { id: "wa21156026a", name: "Columbia Public Health Center Dental Clinic" },
+      { id: "wa21156026b", name: "North Seattle Dental Clinic" },
+      { id: "wa21156026c", name: "Eastgate Public Health Center Dental Clinic" },
+      { id: "wa21156026d", name: "Renton Public Health Center Dental Clinic" }
+    ];
 
-    const { children } = this.props;
-    console.log('updater render');
+    let providerComponents = providerList.map((provider) => {
+      console.log('adding:' + provider.name);
+      return <ServiceLocationUpdater providerID={provider.id} providerName={provider.name} />
+    });
+    console.log(providerComponents);
     return (
-      <div className={style.normal}>
-        <WaitTimeUpdater providerID={providerID} />
-        {children}
+      <div className={style.main}>
+        {providerComponents}
       </div>
     );
   }
