@@ -24,15 +24,15 @@ export class ControllerOne extends React.Component<ControllerOne.Props, Controll
   render() {
     // load the provider ID query string param
     const params = new URLSearchParams(this.props.location.search);
-    const providerID = params.get('providerID') || realTimeManager.PROVIDER_ID_WAITING_ROOM;
+    const providerID = params.get('providerID') || realTimeManager.PROVIDER_ID_URGENT_CARE;
 
     const { children } = this.props;
 
     return (
       <div className={style.main}>
         <WaitTimeUpdater providerID={providerID} />
-        {children}
         <ToggleListUpdater providerID={providerID} />
+        {children}
       </div>
     );
   }
