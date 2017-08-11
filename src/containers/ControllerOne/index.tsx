@@ -50,7 +50,7 @@ export class ControllerOne extends React.Component<ControllerOne.Props, Controll
               <hr />
               <div className={style.componentGrid} >
                 <ToggleUpdater providerID={providerID} serviceType="acceptingNow" description="Accepting new patients?" />
-                <NumberCounterUpdater providerID={providerID} serviceType="waitTime" description="Current Wait Time" />
+                <NumberCounterUpdater providerID={providerID} serviceType="waitTime" description="Current Wait Time" stepAmount={5} />
               </div>
             </div>
             <div className={style.componentItem}>

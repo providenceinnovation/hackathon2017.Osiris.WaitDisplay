@@ -48,7 +48,7 @@ export class ServiceLocationUpdater extends React.Component<ServiceLocationUpdat
     Iterate the list and render widgets for each service type
     */
     let widgetComponents = widgets.map((widget) => {
-      return <NumberCounterUpdater providerID={this.props.providerID} serviceType={widget.serviceType} description={widget.description} />
+      return <NumberCounterUpdater providerID={this.props.providerID} serviceType={widget.serviceType} description={widget.description} stepAmount={1} />
     });
     return (
       <div className={style.main}>

@@ -63,7 +63,7 @@ body {
 
   background-color: white;
 
-  padding-left: 16px;
+  padding: 10px 16px 0px 16px;
 }
 
 .componentHeader > div {
@@ -93,7 +93,6 @@ body {
 }
 
 .componentItem {
-  flex-flow: row;
   background-color: white;
   margin-top: 10px;
   padding: 10px;
@@ -105,6 +104,7 @@ body {
 }
 
 .componentItemHeader {
+  display: flex;
   flex-flow: row;
   align-items: center;
 
@@ -120,6 +120,7 @@ body {
 }
 
 .componentItem > hr {
+  display: flex;
   flex-flow: row;
   border-top: 1px solid #8c8b8b;
   background-color: #8c8b8b;
@@ -130,6 +131,8 @@ body {
 
 .componentGrid {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column;
+  justify-content: space-around;
+
   width: 100%;
 }

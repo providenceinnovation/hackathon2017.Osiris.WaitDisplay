@@ -35,7 +35,7 @@ export class Toggle extends React.Component<Toggle.Props, Toggle.State> {
     console.log(this.state);
     return (
       <div className={style.main}>
-        <div className={this.state.toggle ? style.available : style.notAvailable}>{this.state.toggle ? "Accepting new patients": 'Not accepting new patients'}</div>
+        <div className={this.state.toggle ? style.available : style.notAvailable}>{this.state.toggle ? "Accepting patients": 'Not accepting patients'}</div>
       </div>
     );
   }

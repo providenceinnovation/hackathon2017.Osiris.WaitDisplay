@@ -9,6 +9,7 @@ export namespace NumberCounterUpdater {
     providerID: string;
     serviceType: string;
     description: string;
+    stepAmount: number;
   }
 
   export interface State {
@@ -30,9 +31,11 @@ export class NumberCounterUpdater extends React.Component<NumberCounterUpdater.P
 
   handleAdd = () => {
     this.setState((prevState) => {
-      return {controlValue: prevState.controlValue + 1};
+      return {controlValue: prevState.controlValue + this.props.stepAmount};
     });
-    realTimeManager.updateRealTimeValue(this.props.providerID, this.props.serviceType, this.state.controlValue + 1);
+
+    realTimeManager.updateRealTimeValue(this.props.providerID, this.props.serviceType,
+      this.state.controlValue + this.props.stepAmount);
   };
 
   handleRemove = () => {
@@ -41,9 +44,11 @@ export class NumberCounterUpdater extends React.Component<NumberCounterUpdater.P
     }
 
     this.setState((prevState) => {
-      return {controlValue: prevState.controlValue - 1};
+      return {controlValue: Math.max(prevState.controlValue - this.props.stepAmount, 0)};
     });
-    realTimeManager.updateRealTimeValue(this.props.providerID, this.props.serviceType, this.state.controlValue - 1);
+
+    realTimeManager.updateRealTimeValue(this.props.providerID, this.props.serviceType,
+      Math.max(this.state.controlValue - this.props.stepAmount, 0));
   };
 
   componentDidMount () {

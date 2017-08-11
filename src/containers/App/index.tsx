@@ -35,14 +35,14 @@ export class App extends React.Component<App.Props, App.State> {
         <div className={style.componentContainer}>
           <div className={style.componentHeader} >
             <div>
-              <span>Availability</span><span className={style.lastUpdated}> LAST UPDATE 08/10/17 04:43PM</span>
+              <span>Welcome to the Waiting Room</span><span className={style.lastUpdated}> LAST UPDATE 08/10/17 04:43PM</span>
             </div>
           </div>
           <div className={style.componentContainerLayout}>
             <div className={style.componentItem}>
               <div className={style.componentItemHeader}>
                 <img src={require('../../images/WaitTimeIcon.png')} />
-                <span>Bed Availability</span>
+                <span>Wait Time</span>
               </div>
               <hr />
               <div className={style.componentGrid} >
@@ -56,7 +56,7 @@ export class App extends React.Component<App.Props, App.State> {
             <div className={style.componentItem}>
               <div className={style.componentItemHeader}>
                 <img src={require('../../images/InsuranceIcon.png')} />
-                <span>Insurance</span>
+                <span>Accepted Insurance</span>
               </div>
               <hr />
               <div className={style.componentGrid} >
