@@ -26,7 +26,7 @@ export class ControllerOne extends React.Component<ControllerOne.Props, Controll
     const providerID = params.get('providerID') || realTimeManager.PROVIDER_ID_WAITING_ROOM;
 
     const { children } = this.props;
-    console.log('updater render');
+
     return (
       <div className={style.main}>
         <WaitTimeUpdater providerID={providerID} />

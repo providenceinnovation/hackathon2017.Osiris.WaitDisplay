@@ -23,12 +23,27 @@ export class NumberCounterUpdater extends React.Component<NumberCounterUpdater.P
     this.state = {
       controlValue: 0
     };
+
+    this.handleAdd = this.handleAdd.bind(this);
+    this.handleRemove = this.handleRemove.bind(this);
   }
 
-  handleSliderChange = (stateField, updatedValue) => {
-    this.setState({...this.state, controlValue: updatedValue});
+  handleAdd = () => {
+    this.setState((prevState) => {
+      return {controlValue: prevState.controlValue + 1};
+    });
+    realTimeManager.updateRealTimeValue(this.props.providerID, this.props.serviceType, this.state.controlValue + 1);
+  };
 
-    realTimeManager.updateRealTimeValue(this.props.providerID, this.props.serviceType, updatedValue);
+  handleRemove = () => {
+    if (this.state.controlValue === 0) {
+      return;
+    }
+
+    this.setState((prevState) => {
+      return {controlValue: prevState.controlValue - 1};
+    });
+    realTimeManager.updateRealTimeValue(this.props.providerID, this.props.serviceType, this.state.controlValue - 1);
   };
 
   componentDidMount () {
@@ -47,10 +62,12 @@ export class NumberCounterUpdater extends React.Component<NumberCounterUpdater.P
 
     return (
       <div className={style.main}>
-        <span className={style.description}>${this.props.description}</span>
-        <Button className={style.controlButton} icon='add' floating accent />
-        <span className={style.controlValue}>${controlValue}</span>
-        <Button className={style.controlButton} icon='remove' floating accent />
+        <span className={style.description}>{this.props.description}</span>
+        <div className={style.controlContainer}>
+          <Button className={style.controlButton} icon='add' floating mini onClick={this.handleAdd} />
+          <span className={style.controlValue}>{controlValue}</span>
+          <Button className={style.controlButton} icon='remove' floating mini onClick={this.handleRemove} />
+        </div>
       </div>
     );
   }

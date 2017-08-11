@@ -6,3 +6,10 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  background-color: lightgray;
+}

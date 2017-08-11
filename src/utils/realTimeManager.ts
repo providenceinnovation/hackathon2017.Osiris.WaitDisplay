@@ -1,11 +1,14 @@
 import * as firebase from 'firebase/app';
 require('firebase/database');
 
+// TODO: Turn this bastardized file into a class
+
 export const PROVIDER_ID_DENTAL: string = 'wa211134271';
 export const PROVIDER_ID_WAITING_ROOM: string = 'wa211102164';
 
 let serviceTypes: any = undefined;
 let currentProvider: any = undefined;
+let initialized: boolean = false;
 
 const firebaseConfig = {
   apiKey: "AIzaSyAK85QlhMVUyDgMZYaXDX3wWaTUnhHAoPo",
@@ -26,7 +29,10 @@ function getRealTimePath(providerID: string) {
 
 export function setupFirebase() {
   console.log('waitTime:setupFirebase:', firebaseConfig);
-  firebase.initializeApp(firebaseConfig);
+  if (!initialized) {
+    firebase.initializeApp(firebaseConfig);
+    initialized = true;
+  }
 }
 
 export function getProvider(providerID: string): Promise<any> {

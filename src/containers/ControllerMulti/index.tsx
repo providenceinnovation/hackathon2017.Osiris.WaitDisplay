@@ -30,10 +30,9 @@ export class ControllerMulti extends React.Component<ControllerMulti.Props, Cont
     ];
 
     let providerComponents = providerList.map((provider) => {
-      console.log('adding:' + provider.name);
       return <ServiceLocationUpdater providerID={provider.id} providerName={provider.name} />
     });
-    console.log(providerComponents);
+
     return (
       <div className={style.main}>
         {providerComponents}
