@@ -1,3 +1,16 @@
 .main {
-  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.description {
+  flex-grow: 1;
+
+  font-size: 13px;
+  line-height: 24pt;
+  letter-spacing: 0.9pt;
+
+  color: rgba(0, 0, 0, 0.87);
 }

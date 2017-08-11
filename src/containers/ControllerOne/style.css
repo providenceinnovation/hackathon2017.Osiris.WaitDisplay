@@ -21,10 +21,10 @@ body {
   background-color: rgb(245 245 245);
 }
 .main {
-  display: flex;
   flex-flow: column;
   justify-content: space-around;
   align-items: center;
+  min-width: 1000px;
 }
 
 .header {
@@ -48,12 +48,9 @@ body {
   width: 100%;
 
   padding: 18px 16px 10px 16px;
-
-  background-color: white;
 }
 
 .componentHeader {
-  display: flex;
   flex-flow: column;
   align-items: flex-start;
   width: 100%;
@@ -61,10 +58,11 @@ body {
   font-size: 20px;
   line-height: 32pt;
   letter-spacing: 0.8pt;
+
+  background-color: white;
 }
 
 .componentHeader > div {
-  display: flex;
   flex-flow: row;
   justify-content: center;
   align-items: flex-end;
@@ -80,6 +78,43 @@ body {
   letter-spacing: 0.9pt;
   font-weight: 300;
   color: rgba(0 0 0 0.54);
+}
+
+.componentContainerLayout {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  margin-top: 10px 0px 0px 0px;
+  justify-content: space-between;
+}
+
+.componentItem {
+  flex-flow: row;
+  background-color: white;
+  margin-top: 10px;
+}
+
+.componentItem:first-child {
+  min-width: 300px;
+  margin-right: 10px;
+}
+
+.componentItemHeader {
+  flex-flow: row;
+  align-items: center;
+}
+
+.componentItemHeader > h2 {
+  display: inline;
+}
+
+.componentItem > hr {
+  flex-flow: row;
+  border-top: 1px solid #8c8b8b;
+  background-color: #8c8b8b;
+  text-align: center;
+  margin: 10px auto 0 auto;
+  width: 100%;
 }
 
 .componentGrid {
