@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { RouteComponentProps } from 'react-router';
 import { RootState } from '../../reducers';
-import { NumberSliderUpdater } from '../../components';
+import { NumberCounterUpdater } from '../../components';
 import { ToggleUpdater } from '../../components';
 import { ToggleListUpdater } from '../../components';
 import * as realTimeManager from '../../utils/realTimeManager';
@@ -50,7 +50,7 @@ export class ControllerOne extends React.Component<ControllerOne.Props, Controll
               <hr />
               <div className={style.componentGrid} >
                 <ToggleUpdater providerID={providerID} serviceType="acceptingNow" description="Accepting new patients?" />
-                <NumberSliderUpdater providerID={providerID} serviceType="waitTime" description="Current Wait Time" />
+                <NumberCounterUpdater providerID={providerID} serviceType="waitTime" description="Current Wait Time" />
               </div>
             </div>
             <div className={style.componentItem}>
