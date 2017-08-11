@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { RouteComponentProps } from 'react-router';
 import { RootState } from '../../reducers';
 import { WaitTimeUpdater } from '../../components';
+import { ToggleListUpdater } from '../../components';
 import * as realTimeManager from '../../utils/realTimeManager';
 
 export namespace ControllerOne {
@@ -31,6 +32,7 @@ export class ControllerOne extends React.Component<ControllerOne.Props, Controll
       <div className={style.main}>
         <WaitTimeUpdater providerID={providerID} />
         {children}
+        <ToggleListUpdater providerID={providerID} />
       </div>
     );
   }

@@ -12,7 +12,7 @@ declare type TodoFilterType = 'SHOW_ALL' | 'SHOW_ACTIVE' | 'SHOW_COMPLETED';
 
 declare type TodoStoreState = TodoItemData[];
 
-declare type RealTimeServiceType = 'WAIT_TIME' | 'waitTime' | 'numberOfBeds' | 'acceptingNow';
+declare type RealTimeServiceType = 'WAIT_TIME' | 'waitTime' | 'numberOfBeds' | 'acceptingNow' | 'acceptedInsurance';
 
 // export const WAIT_TIME: RealTimeServiceType = 'waitTime';
 // export const NUMBER_OF_BEDS: RealTimeServiceType = 'numberOfBeds';
