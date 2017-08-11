@@ -49,6 +49,7 @@ export class App extends React.Component<App.Props, App.State> {
 
                 <WaitTime providerID={providerID} />
               </div>
+              <hr />
               <div className={style.componentGrid} >
                 <Toggle providerID={providerID} />
               </div>
