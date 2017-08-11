@@ -59,6 +59,8 @@ body {
   flex-flow: row;
   justify-content: center;
   align-items: flex-end;
+
+  padding: 6px 6px 0px 16px;
 }
 
 .componentHeader img {
@@ -87,19 +89,30 @@ body {
   margin-top: 10px;
 }
 .componentItem:first-child {
-    min-width: 300px;
-    margin-right: 10px;
+  min-width: 300px;
+  margin-right: 10px;
 }
 .componentItemHeader {
+  display: flex;
   flex-flow: row;
   align-items: center;
+
+  font-size: 20px;
+  line-height: 32pt;
+  letter-spacing: 0.8pt;
+
+  padding: 10px 6px 0px 16px;
+}
+
+.componentItemHeader > img {
+  margin-right: 10px;
 }
 
 .componentItemHeader > h2 {
   display: inline;
 }
 
-.componentItem > hr {
+hr  {
   flex-flow: row;
   border-top: 1px solid #8c8b8b;
   background-color: #8c8b8b;
@@ -113,4 +126,6 @@ body {
   flex-flow: row wrap;
   justify-content: space-around;
   width: 100%;
+
+  padding-top: 16px;
 }
