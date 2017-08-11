@@ -7,6 +7,7 @@ export { NumberCounterUpdater } from './NumberCounterUpdater';
 export { NumberSliderUpdater } from './NumberSliderUpdater';
 export { ServiceLocationUpdater } from './ServiceLocationUpdater';
 export { ToggleUpdater } from './ToggleUpdater';
+export { ToggleList } from './ToggleList';
 export { ToggleListUpdater } from './ToggleListUpdater';
 export { ToggleListItemUpdater } from './ToggleListItemUpdater';
 export { WaitTime } from './WaitTime';
