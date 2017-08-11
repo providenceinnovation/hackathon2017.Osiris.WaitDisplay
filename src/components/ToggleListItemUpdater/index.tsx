@@ -1,8 +1,6 @@
 import * as React from 'react';
 import * as style from './style.css';
 import * as realTimeManager from '../../utils/realTimeManager';
-import Card from 'react-toolbox/lib/card';
-import CardTitle from 'react-toolbox/lib/card';
 
 export namespace ToggleListItemUpdater {
   export interface Props {
@@ -52,10 +50,9 @@ export class ToggleListItemUpdater extends React.Component<ToggleListItemUpdater
     const { controlValue } = this.state;
 
     return (
-      <Card onClick={this.handleToggle} className={style.insuranceCard}>
-        <CardTitle title={this.props.description}/>
+      <div onClick={this.handleToggle} className={this.state.controlValue ? style.insuranceCardOn : style.insuranceCardOff}>
         {this.props.description}
-        </Card>
+        </div>
     );
   }
 }

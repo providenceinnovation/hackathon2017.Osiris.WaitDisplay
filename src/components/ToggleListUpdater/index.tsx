@@ -45,7 +45,7 @@ export class ToggleListUpdater extends React.Component<ToggleListUpdater.Props, 
   render() {
     let acceptedInsurances = this.state.acceptedInsurance.map((ai) => {
       console.log(ai);
-      let serviceType = `acceptingInsurance/${ai}`;
+      let serviceType = `acceptedInsurance/value/${ai}`;
       return <ToggleListItemUpdater key={ai} providerID={this.props.providerID} serviceType={serviceType} description={ai}/>;
     });
     return (
