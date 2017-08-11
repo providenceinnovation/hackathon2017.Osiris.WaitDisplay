@@ -50,7 +50,6 @@ export class ToggleListUpdater extends React.Component<ToggleListUpdater.Props, 
     });
     return (
       <div>
-        <h1>Update Insurances</h1>
         <div className={style.toggleListUpdater}>
           {acceptedInsurances}
         </div>

@@ -46,7 +46,7 @@ export class NumberSliderUpdater extends React.Component<NumberSliderUpdater.Pro
 
     return (
       <div className={style.main}>
-         <p>${this.props.description}</p>
+         <p>{this.props.description}</p>
          <Slider
           value={controlValue}
           onChange={this.handleSliderChange.bind(this, 'controlValue')}

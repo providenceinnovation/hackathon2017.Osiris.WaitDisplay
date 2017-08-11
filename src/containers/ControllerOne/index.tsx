@@ -4,7 +4,8 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { RouteComponentProps } from 'react-router';
 import { RootState } from '../../reducers';
-import { WaitTimeUpdater } from '../../components';
+import { NumberSliderUpdater } from '../../components';
+import { ToggleUpdater } from '../../components';
 import { ToggleListUpdater } from '../../components';
 import * as realTimeManager from '../../utils/realTimeManager';
 
@@ -34,19 +35,34 @@ export class ControllerOne extends React.Component<ControllerOne.Props, Controll
           <img src={require('../../images/SoundMentalLogo.png')} />
           <h1>Sound Mental Health<br />of Seattle</h1>
         </div>
-        <div className={style.componentContainer} >
+        <div className={style.componentContainer}>
           <div className={style.componentHeader} >
             <div>
               <span>Update Availability</span><span className={style.lastUpdated}> LAST UPDATE 08/10/17 04:43PM</span>
             </div>
-          <hr />
-            <div>
-        <WaitTimeUpdater providerID={providerID} />
-            </div>
           </div>
-          <div className={style.componentGrid} >
-        <ToggleListUpdater providerID={providerID} />
-        {children}
+          <div className={style.componentContainerLayout}>
+            <div className={style.componentItem}>
+              <div className={style.componentItemHeader}>
+                <img src={require('../../images/BedAvailability.png')} />
+                <span>Update Availability</span>
+              </div>
+              <hr />
+              <div className={style.componentGrid} >
+                <ToggleUpdater providerID={providerID} serviceType="acceptingNow" description="Accepting new patients?" />
+                <NumberSliderUpdater providerID={providerID} serviceType="waitTime" description="Current Wait Time" />
+              </div>
+            </div>
+            <div className={style.componentItem}>
+              <div className={style.componentItemHeader}>
+                <img src={require('../../images/InsuranceIcon.png')} />
+                <span>Update Insurances</span>
+              </div>
+              <hr />
+              <div className={style.componentGrid} >
+                <ToggleListUpdater providerID={providerID} />
+              </div>
+            </div>
           </div>
         </div>
       </div>
