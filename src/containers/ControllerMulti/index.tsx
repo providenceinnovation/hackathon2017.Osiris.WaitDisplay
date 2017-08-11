@@ -23,10 +23,10 @@ export class ControllerMulti extends React.Component<ControllerMulti.Props, Cont
 
   render() {
     const providerList = [
-      { id: "wa21156026a", name: "Columbia Public Health Center Dental Clinic" },
-      { id: "wa21156026b", name: "North Seattle Dental Clinic" },
-      { id: "wa21156026c", name: "Eastgate Public Health Center Dental Clinic" },
-      { id: "wa21156026d", name: "Renton Public Health Center Dental Clinic" }
+      { id: "wa21156026d", name: "Renton Clinic" },
+      { id: "wa21156026b", name: "North Seattle Clinic" },
+      { id: "wa21156026a", name: "Columbia Clinic" },
+      { id: "wa21156026c", name: "Eastgate Clinic" }
     ];
 
     let providerComponents = providerList.map((provider) => {
@@ -35,7 +35,25 @@ export class ControllerMulti extends React.Component<ControllerMulti.Props, Cont
 
     return (
       <div className={style.main}>
-        {providerComponents}
+        <div className={style.header}>
+          <img src={require('../../images/KingCountyLogo.png')} />
+          <h1>Seattle & King County<br/>Public Health Centers</h1>
+        </div>
+        <div className={style.componentContainer} >
+          <div className={style.componentHeader} >
+            <div>
+              <span>Update Clinic Availablity</span><span className={style.lastUpdated}>LAST UPDATE 08/10/17 04:43PM</span>
+            </div>
+            <div>
+              <img src={require('../../images/WaitTimeIcon.png')} />
+              <span>Appointment Availability</span>
+            </div>
+          </div>
+          <hr />
+          <div className={style.componentGrid} >
+            {providerComponents}
+          </div>
+        </div>
       </div>
     );
   }
