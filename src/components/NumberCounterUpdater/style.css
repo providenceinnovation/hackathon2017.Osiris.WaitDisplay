@@ -1,8 +1,15 @@
 .main {
-  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  background-color: lightgreen;
 }
 
 .description {
+  flex-grow: 1;
+}
+
+.controlContainer {
 
 }
 
@@ -11,5 +18,5 @@
 }
 
 .controlButton {
-
+  background: red;
 }

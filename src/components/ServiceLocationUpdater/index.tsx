@@ -41,6 +41,11 @@ export class ServiceLocationUpdater extends React.Component<ServiceLocationUpdat
       }
     ];
 
+    /* TODO
+    Pull the realTime list from firebase
+    Retrieve the service types from the realTimeManager - should be cached
+    Iterate the list and render widgets for each service type
+    */
     let widgetComponents = widgets.map((widget) => {
       return <NumberCounterUpdater providerID={this.props.providerID} serviceType={widget.serviceType} description={widget.description} />
     });
