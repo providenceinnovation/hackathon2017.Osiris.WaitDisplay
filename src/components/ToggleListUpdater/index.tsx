@@ -49,7 +49,7 @@ export class ToggleListUpdater extends React.Component<ToggleListUpdater.Props, 
       return <ToggleListItemUpdater key={ai} providerID={this.props.providerID} serviceType={serviceType} description={ai}/>;
     });
     return (
-        <div>
+        <div className={style.toggleListUpdater}>
         {acceptedInsurances}
         </div>
 

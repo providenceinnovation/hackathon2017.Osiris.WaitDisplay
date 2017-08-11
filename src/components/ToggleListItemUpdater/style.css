@@ -1,17 +1,4 @@
-.main {
-  display: flex;
-  flex-flow: row;
-  justify-content: space-around;
-  background-color: lightgreen;
-}
-
-.description {
-  flex-grow: 1;
-}
 .insuranceCard {
-  width: 100px;
-  height: 100px;
-}
-.controlContainer {
-
+  background-color: lightblue;
+  min-width: 350px;
 }
