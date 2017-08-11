@@ -18,7 +18,7 @@ export class ToggleListUpdater extends React.Component<ToggleListUpdater.Props, 
       acceptedInsurance: []
     };
   }
-  componentDidMount () {
+  componentDidMount() {
     // get provider
     realTimeManager.setupFirebase();
     let provider: any;
@@ -35,7 +35,7 @@ export class ToggleListUpdater extends React.Component<ToggleListUpdater.Props, 
         console.log(this.state);
       });
 
-    }).catch((err)=>{
+    }).catch((err) => {
       console.error(err);
     });
     console.log('mounted');
@@ -49,9 +49,12 @@ export class ToggleListUpdater extends React.Component<ToggleListUpdater.Props, 
       return <ToggleListItemUpdater key={ai} providerID={this.props.providerID} serviceType={serviceType} description={ai}/>;
     });
     return (
+      <div>
+        <h1>Update Insurances</h1>
         <div className={style.toggleListUpdater}>
-        {acceptedInsurances}
+          {acceptedInsurances}
         </div>
+      </div>
 
     );
   }

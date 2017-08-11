@@ -30,9 +30,25 @@ export class ControllerOne extends React.Component<ControllerOne.Props, Controll
 
     return (
       <div className={style.main}>
+        <div className={style.header}>
+          <img src={require('../../images/SoundMentalLogo.png')} />
+          <h1>Sound Mental Health<br />of Seattle</h1>
+        </div>
+        <div className={style.componentContainer} >
+          <div className={style.componentHeader} >
+            <div>
+              <span>Update Availability</span><span className={style.lastUpdated}> LAST UPDATE 08/10/17 04:43PM</span>
+            </div>
+          <hr />
+            <div>
         <WaitTimeUpdater providerID={providerID} />
+            </div>
+          </div>
+          <div className={style.componentGrid} >
         <ToggleListUpdater providerID={providerID} />
         {children}
+          </div>
+        </div>
       </div>
     );
   }
