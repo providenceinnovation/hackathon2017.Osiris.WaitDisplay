@@ -54,7 +54,8 @@ export class ServiceLocationUpdater extends React.Component<ServiceLocationUpdat
       <div className={style.main}>
         <h3>{this.props.providerName}</h3>
         {widgetComponents}
-        <ToggleUpdater providerID={this.props.providerID} serviceType="acceptingNow" description="Emergency?" />
+        <ToggleUpdater providerID={this.props.providerID} serviceType="acceptingNow" description="Accepting patients?" />
+        <ToggleUpdater providerID={this.props.providerID} serviceType="acceptingEmergencyNow" description="Emergency?" />
       </div>
     );
   }

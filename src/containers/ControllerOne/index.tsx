@@ -38,14 +38,14 @@ export class ControllerOne extends React.Component<ControllerOne.Props, Controll
         <div className={style.componentContainer}>
           <div className={style.componentHeader} >
             <div>
-              <span>Update Availability</span><span className={style.lastUpdated}> LAST UPDATE 08/10/17 04:43PM</span>
+              <span>Update Clinic Availability</span><span className={style.lastUpdated}> LAST UPDATE 08/10/17 04:43PM</span>
             </div>
           </div>
           <div className={style.componentContainerLayout}>
             <div className={style.componentItem}>
               <div className={style.componentItemHeader}>
-                <img src={require('../../images/BedAvailability.png')} />
-                <span>Update Availability</span>
+                <img src={require('../../images/WaitTimeIcon.png')} />
+                <span>Update Wait Time</span>
               </div>
               <hr />
               <div className={style.componentGrid} >

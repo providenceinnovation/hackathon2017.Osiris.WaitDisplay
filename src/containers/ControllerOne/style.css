@@ -24,7 +24,8 @@ body {
   flex-flow: column;
   justify-content: space-around;
   align-items: center;
-  min-width: 1000px;
+  min-width: 800px;
+  max-width: 1200px;
 }
 
 .header {
@@ -51,15 +52,18 @@ body {
 }
 
 .componentHeader {
+  display: flex;
   flex-flow: column;
   align-items: flex-start;
+  justify-content: center;
   width: 100%;
 
   font-size: 20px;
-  line-height: 32pt;
   letter-spacing: 0.8pt;
 
   background-color: white;
+
+  padding-left: 16px;
 }
 
 .componentHeader > div {
@@ -92,6 +96,7 @@ body {
   flex-flow: row;
   background-color: white;
   margin-top: 10px;
+  padding: 10px;
 }
 
 .componentItem:first-child {
@@ -102,10 +107,16 @@ body {
 .componentItemHeader {
   flex-flow: row;
   align-items: center;
+
+  font-size: 20px;
+  line-height: 32pt;
+  letter-spacing: 0.8pt;
+
+  padding-left: 16px;
 }
 
-.componentItemHeader > h2 {
-  display: inline;
+.componentItemHeader img {
+  margin-right: 10px;
 }
 
 .componentItem > hr {
@@ -120,6 +131,5 @@ body {
 .componentGrid {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
   width: 100%;
 }

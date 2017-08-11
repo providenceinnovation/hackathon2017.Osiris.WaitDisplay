@@ -1,26 +1,29 @@
 .insuranceCardOff {
-  width: 45%;  /* Or whatever */
-  max-width: 45%;
+  width: 32%;
   margin: 10px 10px 0px 0px;
-  height: 100px; /* Or whatever */
-  font-size: 40px;
-  line-height: 40px;
+  height: 56px;
+
+  font-size: 14px;
+  line-height: 14pt;
+  letter-spacing: 0.8pt;
   text-align: center;
+
   padding: 10px;
   text-transform: uppercase;
   background-color: lightgray;
-  color: white;
-  max-height: 100px;
+  color: black;
 }
 
 .insuranceCardOn {
-  width: 45%;  /* Or whatever */
-  max-width: 45%;
+  width: 32%;
   margin: 10px 10px 0px 0px;
-  height: 100px;
-  font-size: 40px;
-  line-height: 40px;
+  height: 56px;
+
+  font-size: 14px;
+  line-height: 14pt;
+  letter-spacing: 0.8pt;
   text-align: center;
+
   padding: 10px;
   text-transform: uppercase;
   background-color: rgb(0, 112, 169);

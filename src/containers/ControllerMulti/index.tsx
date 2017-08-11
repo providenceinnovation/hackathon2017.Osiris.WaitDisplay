@@ -45,7 +45,7 @@ export class ControllerMulti extends React.Component<ControllerMulti.Props, Cont
               <span>Update Clinic Availability</span><span className={style.lastUpdated}>LAST UPDATE 08/10/17 04:43PM</span>
             </div>
             <div>
-              <img src={require('../../images/WaitTimeIcon.png')} />
+              <img src={require('../../images/BedAvailability.png')} />
               <span>Appointment Availability</span>
             </div>
           </div>
