@@ -59,6 +59,15 @@ export class WaitTimeUpdater extends React.Component<WaitTimeUpdater.Props, Wait
     const { acceptingNow, waitTime } = this.state;
     return (
       <div className={style.main}>
+      <div>
+        <p>Accepting New Patients</p>
+        <Switch
+          checked={acceptingNow}
+          label="Accepting Now?"
+          onChange={this.handleSwitchChange.bind(this, 'acceptingNow')}
+        />
+        </div>
+        <div>
          <p>Current Wait Time</p>
          <Slider
           value={waitTime}
@@ -68,12 +77,7 @@ export class WaitTimeUpdater extends React.Component<WaitTimeUpdater.Props, Wait
           editable
           min={0}
           max={120} />
-        <p>Accepting New Patients</p>
-        <Switch
-          checked={acceptingNow}
-          label="Accepting Now?"
-          onChange={this.handleSwitchChange.bind(this, 'acceptingNow')}
-        />
+          </div>
       </div>
     );
   }

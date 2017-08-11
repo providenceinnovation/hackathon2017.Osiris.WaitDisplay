@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { RouteComponentProps } from 'react-router';
 import { RootState } from '../../reducers';
 import { WaitTimeUpdater } from '../../components';
+import { ToggleListUpdater } from '../../components';
 import * as realTimeManager from '../../utils/realTimeManager';
 
 export namespace ControllerOne {
@@ -23,14 +24,31 @@ export class ControllerOne extends React.Component<ControllerOne.Props, Controll
   render() {
     // load the provider ID query string param
     const params = new URLSearchParams(this.props.location.search);
-    const providerID = params.get('providerID') || realTimeManager.PROVIDER_ID_WAITING_ROOM;
+    const providerID = params.get('providerID') || realTimeManager.PROVIDER_ID_URGENT_CARE;
 
     const { children } = this.props;
 
     return (
       <div className={style.main}>
+        <div className={style.header}>
+          <img src={require('../../images/SoundMentalLogo.png')} />
+          <h1>Sound Mental Health<br />of Seattle</h1>
+        </div>
+        <div className={style.componentContainer} >
+          <div className={style.componentHeader} >
+            <div>
+              <span>Update Availability</span><span className={style.lastUpdated}> LAST UPDATE 08/10/17 04:43PM</span>
+            </div>
+          <hr />
+            <div>
         <WaitTimeUpdater providerID={providerID} />
+            </div>
+          </div>
+          <div className={style.componentGrid} >
+        <ToggleListUpdater providerID={providerID} />
         {children}
+          </div>
+        </div>
       </div>
     );
   }

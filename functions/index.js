@@ -2,13 +2,14 @@ const functions = require('firebase-functions');
 // The Firebase Admin SDK to access the Firebase Realtime Database.
 const admin = require('firebase-admin');
 admin.initializeApp(functions.config().firebase);
-
-exports.logChange = functions.database.ref('/providers/{providerId}').onUpdate(event => {
+const refToWatch = '/notrealtime/{providerId}/{serviceType}';
+const updateTimePath = 'updateDateTime';
+exports.logChange = functions.database.ref(refToWatch).onUpdate(event => {
   const eventSnapshot = event.data;
-  var updateDateTimeSnapshot = eventSnapshot.child('updateDateTime');
+  const updateDateTimeSnapshot = eventSnapshot.child(updateTimePath);
   const original = event.data.val();
 
-  if (!updateDateTimeSnapshot.changed()) {
+  if (!updateDateTimeSnapshot || updateDateTimeSnapshot.changed()) {
     console.log('need to update the updateDateTime');
     const timestamp = event.timestamp;
     return event.data.ref.child('updateDateTime').set(timestamp);

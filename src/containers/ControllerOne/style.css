@@ -1,8 +1,90 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
 @import url('https://fonts.googleapis.com/css?family=Aldrich');
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 html,
 body {
   margin: 0;
   padding: 0;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  justify-content: space-around;
+
+  font-family: 'Roboto';
+  font-weight: 500;
+
+  background-color: rgb(245 245 245);
+}
+.main {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+
+  background-color: inherit;
+}
+
+.header > h1 {
+  font-size: 34px;
+  line-height: 40pt;
+}
+
+.componentContainer {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+
+  padding: 18px 16px 10px 16px;
+
+  background-color: white;
+}
+
+.componentHeader {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  width: 100%;
+
+  font-size: 20px;
+  line-height: 32pt;
+  letter-spacing: 0.8pt;
+}
+
+.componentHeader > div {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.componentHeader img {
+  margin-right: 10px;
+}
+
+.lastUpdated {
+  font-size: 11px;
+  line-height: 24pt;
+  letter-spacing: 0.9pt;
+  font-weight: 300;
+  color: rgba(0 0 0 0.54);
+}
+
+.componentGrid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  width: 100%;
 }

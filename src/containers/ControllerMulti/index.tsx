@@ -42,7 +42,7 @@ export class ControllerMulti extends React.Component<ControllerMulti.Props, Cont
         <div className={style.componentContainer} >
           <div className={style.componentHeader} >
             <div>
-              <span>Update Clinic Availablity</span><span className={style.lastUpdated}>LAST UPDATE 08/10/17 04:43PM</span>
+              <span>Update Clinic Availability</span><span className={style.lastUpdated}>LAST UPDATE 08/10/17 04:43PM</span>
             </div>
             <div>
               <img src={require('../../images/WaitTimeIcon.png')} />

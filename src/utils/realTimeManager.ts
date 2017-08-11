@@ -5,6 +5,7 @@ require('firebase/database');
 
 export const PROVIDER_ID_DENTAL: string = 'wa211134271';
 export const PROVIDER_ID_WAITING_ROOM: string = 'wa211102164';
+export const PROVIDER_ID_URGENT_CARE: string = 'wa211119151';
 
 let serviceTypes: any = undefined;
 let currentProvider: any = undefined;
@@ -29,6 +30,7 @@ function getRealTimePath(providerID: string) {
 
 export function setupFirebase() {
   console.log('waitTime:setupFirebase:', firebaseConfig);
+  initialized = initialized || firebase.apps.length > 0;
   if (!initialized) {
     firebase.initializeApp(firebaseConfig);
     initialized = true;
