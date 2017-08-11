@@ -56,7 +56,7 @@ export class ControllerOne extends React.Component<ControllerOne.Props, Controll
             <div className={style.componentItem}>
               <div className={style.componentItemHeader}>
                 <img src={require('../../images/InsuranceIcon.png')} />
-                <span>Update Insurances</span>
+                <span>Update Insurance</span>
               </div>
               <hr />
               <div className={style.componentGrid} >

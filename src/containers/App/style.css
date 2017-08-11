@@ -5,21 +5,42 @@ html,
 body {
   margin: 0;
   padding: 0;
-  display: flex;
-  align-items: center;
-  flex-flow: column;
-  justify-content: space-around;
 
   font-family: 'Roboto';
   font-weight: 500;
 
-  background-color: rgb(245 245 245);}
+  background-color: rgb(245 245 245);
+
+  width: 100vw;
+}
+
+body > div {
+  width: 100vw;
+}
+
+header {
+  height: 54px;
+  background-color: white;
+
+  box-shadow: 4px 4px 6px #888888;
+  padding-bottom: 1px;
+
+  width: 100%;
+}
+
+header > img {
+  height: 50px;
+}
 
 .main {
+  display: flex;
+  align-items: center;
   flex-flow: column;
   justify-content: space-around;
   align-items: center;
-  min-width: 1000px;
+  min-width: 300px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .header {
@@ -30,6 +51,8 @@ body {
   width: 100%;
 
   background-color: inherit;
+
+  margin-top: 6px;
 }
 
 .header > h1 {
@@ -87,11 +110,18 @@ body {
   flex-flow: row;
   background-color: white;
   margin-top: 10px;
+  flex-grow: 1;
 }
+
 .componentItem:first-child {
   min-width: 300px;
   margin-right: 10px;
 }
+
+.componentItem:last-child {
+  flex-grow: 2;
+}
+
 .componentItemHeader {
   display: flex;
   flex-flow: row;
