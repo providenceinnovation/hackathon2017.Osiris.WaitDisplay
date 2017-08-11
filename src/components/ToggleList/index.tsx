@@ -29,7 +29,7 @@ export class ToggleList extends React.Component<ToggleList.Props, ToggleList.Sta
       let ais: string[] = [];
       for (let ai in updatedToggleList) {
         let entry = updatedToggleList[ai];
-        console.log(entry);
+        // console.log(entry);
         if (entry.value) {
           ais.push(ai);
         }
@@ -40,7 +40,7 @@ export class ToggleList extends React.Component<ToggleList.Props, ToggleList.Sta
 
   render() {
     const acceptedInsurances = this.state.toggleList.map((ai) => {
-      console.log(ai);
+      // console.log(ai);
       return <div key={ai} className={style.insurance}>{ai}</div>;
     });
     const { toggleList } = this.state;

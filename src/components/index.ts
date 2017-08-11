@@ -6,6 +6,7 @@ export { TodoTextInput } from './TodoTextInput';
 export { NumberCounterUpdater } from './NumberCounterUpdater';
 export { NumberSliderUpdater } from './NumberSliderUpdater';
 export { ServiceLocationUpdater } from './ServiceLocationUpdater';
+export { Toggle } from './Toggle';
 export { ToggleUpdater } from './ToggleUpdater';
 export { ToggleList } from './ToggleList';
 export { ToggleListUpdater } from './ToggleListUpdater';

@@ -86,3 +86,31 @@ body {
   background-color: white;
   margin-top: 10px;
 }
+.componentItem:first-child {
+    min-width: 300px;
+    margin-right: 10px;
+}
+.componentItemHeader {
+  flex-flow: row;
+  align-items: center;
+}
+
+.componentItemHeader > h2 {
+  display: inline;
+}
+
+.componentItem > hr {
+  flex-flow: row;
+  border-top: 1px solid #8c8b8b;
+  background-color: #8c8b8b;
+  text-align: center;
+  margin: 10px auto 0 auto;
+  width: 100%;
+}
+
+.componentGrid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  width: 100%;
+}

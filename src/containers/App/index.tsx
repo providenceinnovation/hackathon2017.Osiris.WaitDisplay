@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { RouteComponentProps } from 'react-router';
 import { RootState } from '../../reducers';
-import { WaitTime, ToggleList } from '../../components';
+import { WaitTime, Toggle, ToggleList } from '../../components';
 import * as realTimeManager from '../../utils/realTimeManager';
 
 export namespace App {
@@ -48,6 +48,9 @@ export class App extends React.Component<App.Props, App.State> {
               <div className={style.componentGrid} >
 
                 <WaitTime providerID={providerID} />
+              </div>
+              <div className={style.componentGrid} >
+                <Toggle providerID={providerID} />
               </div>
             </div>
             <div className={style.componentItem}>
