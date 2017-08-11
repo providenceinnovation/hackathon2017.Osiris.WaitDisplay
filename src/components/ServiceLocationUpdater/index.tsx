@@ -33,13 +33,13 @@ export class ServiceLocationUpdater extends React.Component<ServiceLocationUpdat
   render() {
       let widgets = [
       {
+        serviceType: 'numberDentalAppointmentsChildren',
+        description: 'Pediatric'
+      },
+      {
         serviceType: 'numberDentalAppointmentsAdult',
         description: 'Adults'
       },
-      {
-        serviceType: 'numberDentalAppointmentsChildren',
-        description: 'Pediatric'
-      }
     ];
 
     /* TODO
@@ -54,7 +54,7 @@ export class ServiceLocationUpdater extends React.Component<ServiceLocationUpdat
       <div className={style.main}>
         <h3>{this.props.providerName}</h3>
         {widgetComponents}
-        <ToggleUpdater providerID={this.props.providerID} serviceType="acceptingNow" description="Accepting now?" />
+        <ToggleUpdater providerID={this.props.providerID} serviceType="acceptingNow" description="Emergency?" />
       </div>
     );
   }

@@ -2,19 +2,25 @@
   display: flex;
   flex-flow: row;
   justify-content: space-around;
-  background-color: lightgreen;
 }
 
 .description {
   flex-grow: 1;
+
+  font-size: 13px;
+  line-height: 24pt;
+  letter-spacing: 0.9pt;
+
+  color: rgba(0 0 0 0.87);
 }
 
 .controlContainer {
-
 }
 
 .controlValue {
-
+  font-size: 24px;
+  line-height: 32pt;
+  letter-spacing: 0.5pt;
 }
 
 .controlButton {

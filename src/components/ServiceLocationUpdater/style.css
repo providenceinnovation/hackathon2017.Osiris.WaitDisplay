@@ -1,8 +1,15 @@
 .main {
   display: flex;
   flex-flow: column;
-  background-color: lightblue;
   justify-content: space-around;
 
   min-width: 350px;
+}
+
+.main > h3 {
+  font-size: 20px;
+  line-height: 32pt;
+  letter-spacing: 0.8pt;
+
+  color: rgb(0, 112, 169);
 }
