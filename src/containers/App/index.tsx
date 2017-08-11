@@ -28,9 +28,41 @@ export class App extends React.Component<App.Props, App.State> {
     const { children } = this.props;
     return (
       <div className={style.main}>
-        <WaitTime providerID={providerID} />
-        <ToggleList providerID={providerID} />
-        {children}
+        <div className={style.header}>
+          <img src={require('../../images/SoundMentalLogo.png')} />
+          <h1>Sound Mental Health<br />of Seattle</h1>
+        </div>
+        <div className={style.componentContainer}>
+          <div className={style.componentHeader} >
+            <div>
+              <span>Availability</span><span className={style.lastUpdated}> LAST UPDATE 08/10/17 04:43PM</span>
+            </div>
+          </div>
+          <div className={style.componentContainerLayout}>
+            <div className={style.componentItem}>
+              <div className={style.componentItemHeader}>
+                <img src={require('../../images/WaitTimeIcon.png')} />
+                <span>Bed Availability</span>
+              </div>
+              <hr />
+              <div className={style.componentGrid} >
+
+                <WaitTime providerID={providerID} />
+              </div>
+            </div>
+            <div className={style.componentItem}>
+              <div className={style.componentItemHeader}>
+                <img src={require('../../images/InsuranceIcon.png')} />
+                <span>Insurance</span>
+              </div>
+              <hr />
+              <div className={style.componentGrid} >
+                <ToggleList providerID={providerID} />
+                {children}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

@@ -15,63 +15,74 @@ body {
 
   background-color: rgb(245 245 245);}
 
-button {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background: none;
-  font-size: 100%;
-  vertical-align: baseline;
-  font-family: inherit;
-  font-weight: inherit;
-  color: inherit;
-  appearance: none;
-  font-smoothing: antialiased;
+.main {
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 1000px;
 }
 
-
-button,
-input[type="checkbox"] {
-  outline: none;
-}
-
-.normal {
-  background: #fff;
-  height: 100%;
+.header {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: center;
   width: 100%;
-  /* margin: 200px 0 40px 0; */
-  /* position: relative; */
-  /* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1); */
+
+  background-color: inherit;
 }
 
-.normal input::-webkit-input-placeholder {
-  font-style: italic;
-  font-weight: 300;
-  color: #e6e6e6;
+.header > h1 {
+  font-size: 34px;
+  line-height: 40pt;
 }
-
-.normal input::-moz-placeholder {
-  font-style: italic;
-  font-weight: 300;
-  color: #e6e6e6;
-}
-
-.normal input::input-placeholder {
-  font-style: italic;
-  font-weight: 300;
-  color: #e6e6e6;
-}
-
-/* .normal h1 {
-  position: absolute;
-  top: -155px;
+.componentContainer {
+  display: flex;
+  flex-flow: column;
   width: 100%;
-  font-size: 100px;
-  font-weight: 100;
-  text-align: center;
-  color: rgba(175, 47, 47, 0.15);
-  -webkit-text-rendering: optimizeLegibility;
-  -moz-text-rendering: optimizeLegibility;
-  -ms-text-rendering: optimizeLegibility;
-  text-rendering: optimizeLegibility;
-} */
+
+  padding: 18px 16px 10px 16px;
+}
+.componentHeader {
+  flex-flow: column;
+  align-items: flex-start;
+  width: 100%;
+
+  font-size: 20px;
+  line-height: 32pt;
+  letter-spacing: 0.8pt;
+
+  background-color: white;
+}
+
+.componentHeader > div {
+  flex-flow: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.componentHeader img {
+  margin-right: 10px;
+}
+
+.lastUpdated {
+  font-size: 11px;
+  line-height: 24pt;
+  letter-spacing: 0.9pt;
+  font-weight: 300;
+  color: rgba(0 0 0 0.54);
+}
+
+.componentContainerLayout {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  margin-top: 10px 0px 0px 0px;
+  justify-content: space-between;
+}
+
+.componentItem {
+  flex-flow: row;
+  background-color: white;
+  margin-top: 10px;
+}

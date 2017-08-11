@@ -1,9 +1,17 @@
 .main {
   color: red;
   font-family: 'Aldrich', sans-serif;
-  font-size: 128px;
   left: 50%;
   top: 50%;
   width: 100%;
   text-align: center;
+}
+.time {
+  font-size: 128px;
+
+}
+
+.minutes {
+  color: black;
+  font-size: 54px;
 }

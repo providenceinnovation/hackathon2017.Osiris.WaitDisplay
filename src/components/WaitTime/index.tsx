@@ -26,7 +26,7 @@ export class WaitTime extends React.Component<WaitTime.Props, WaitTime.State> {
 
     realTimeManager.startListener(this.props.providerID, WAIT_TIME, (updatedTime) => {
       console.log('Updated wait time:' + JSON.stringify(updatedTime));
-      this.setState({waitTime: updatedTime.value + ' minutes'});
+      this.setState({waitTime: updatedTime.value});
     });
   }
 
@@ -34,7 +34,8 @@ export class WaitTime extends React.Component<WaitTime.Props, WaitTime.State> {
     const { waitTime } = this.state;
     return (
       <div className={style.main}>
-        {waitTime}
+        <div className={style.time}>{waitTime}</div>
+        <div className={style.minutes}>minutes</div>
       </div>
     );
   }
