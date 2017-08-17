@@ -4,6 +4,7 @@
   "private": true,
   "description": "A frontend boilerplate with React, Redux and Typescript",
   "main": "index.js",
+  "repository": "https://github.com/providenceinnovation/hackathon2017.Osiris.WaitDisplay",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --debug --devtool cheap-module-source-map --output-pathinfo --history-api-fallback --hot --inline --progress --colors --port 3000 --open",
@@ -47,6 +48,7 @@
     "firebase": "^4.2.0",
     "firebase-admin": "^5.1.0",
     "firebase-functions": "^0.6.1",
+    "moment": "^2.18.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",
