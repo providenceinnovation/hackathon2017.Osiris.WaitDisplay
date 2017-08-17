@@ -85,7 +85,41 @@ firebase deploy --only functions
 ```
 
 
+# Embeddable Widget
 
+## Renton Public Health - Dental Use Case
+Paste the html below into the site under the "Interpreter Services" section.
+
+http://www.kingcounty.gov/depts/health/locations/renton.aspx
+
+```
+<td>
+  <div>
+    <span class="fa fa-spin fa-circle-o-notch fa-2x fa-color-default pull-left"></span>
+    <span style="font-size: 1.4em; font-weight: 700;">Current Availability</span>
+  </div>
+  <br>
+  <iframe src="https://osiris-26b00.firebaseapp.com/dentalWidget/" allowfullscreen="" frameborder="0"
+    style="width: 100%; height: 82px;"></iframe>
+</td>
+```
+
+## Sound Mental Health - Urgent Care Use Case
+Paste the html below into the site under the "Interpreter Services" section.
+
+http://www.kingcounty.gov/depts/health/locations/renton.aspx
+
+```
+<div>
+  <div>
+    <span class="fa fa-spin fa-circle-o-notch fa-2x fa-color-default pull-left"></span>
+    <span style="font-size: 1.4em; font-weight: 700;line-height:42px">Current Availability</span>
+  </div>
+  <br>
+  <iframe src="https://osiris-26b00.firebaseapp.com/waitTimeWidget/" allowfullscreen="" frameborder="0"
+    style="width: 100%; height: 82px;"></iframe>
+</div>
+```
 
 
 # License
