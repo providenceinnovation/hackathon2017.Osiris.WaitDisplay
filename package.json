@@ -4,6 +4,7 @@
   "private": true,
   "description": "A frontend boilerplate with React, Redux and Typescript",
   "main": "index.js",
+  "repository": "https://github.com/providenceinnovation/hackathon2017.Osiris.WaitDisplay",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --debug --devtool cheap-module-source-map --output-pathinfo --history-api-fallback --hot --inline --progress --colors --port 3000 --open",
