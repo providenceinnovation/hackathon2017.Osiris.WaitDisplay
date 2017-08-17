@@ -87,6 +87,13 @@ firebase deploy --only functions
 
 # Embeddable Widget
 
+The code below describes how to embed widgets on host sites.  These widgets update in realtime and are hosted in iFrames.
+If you want to change the provider then you can pass a providerID on the query string using the provider key from Firebase.
+
+```
+https://osiris-26b00.firebaseapp.com/dentalWidget/?providerID=wa21156026a
+```
+
 ## Renton Public Health - Dental Use Case
 Paste the html below into the site under the "Interpreter Services" section.
 
@@ -100,12 +107,12 @@ http://www.kingcounty.gov/depts/health/locations/renton.aspx
   </div>
   <br>
   <iframe src="https://osiris-26b00.firebaseapp.com/dentalWidget/" allowfullscreen="" frameborder="0"
-    style="width: 100%; height: 82px;"></iframe>
+    style="width: 100%; height: 150px;"></iframe>
 </td>
 ```
 
 ## Sound Mental Health - Urgent Care Use Case
-Paste the html below into the site under the "Interpreter Services" section.
+Paste the html below wherever you want.
 
 http://www.kingcounty.gov/depts/health/locations/renton.aspx
 
