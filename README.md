@@ -100,15 +100,17 @@ Paste the html below into the site under the "Interpreter Services" section.
 http://www.kingcounty.gov/depts/health/locations/renton.aspx
 
 ```
-<td>
-  <div>
-    <span class="fa fa-spin fa-circle-o-notch fa-2x fa-color-default pull-left"></span>
-    <span style="font-size: 1.4em; font-weight: 700;">Current Availability</span>
-  </div>
-  <br>
-  <iframe src="https://osiris-26b00.firebaseapp.com/dentalWidget/" allowfullscreen="" frameborder="0"
-    style="width: 100%; height: 150px;"></iframe>
-</td>
+<div class="row addon-row addon-row-attached">
+  <div class="col-sm-6">
+    <div>
+      <span></span>
+      <span style="font-size: 1.4em; font-weight: 700;">Current Availability</span>
+    </div>
+    <br>
+    <iframe src="https://osiris-26b00.firebaseapp.com/dentalWidget/" allowfullscreen="" frameborder="0"
+      style="width: 100%; height: 230px;"></iframe>
+    </div>
+</div>
 ```
 
 ## Sound Mental Health - Urgent Care Use Case

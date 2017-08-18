@@ -3,7 +3,7 @@ require('firebase/database');
 
 // TODO: Turn this bastardized file into a class
 
-export const PROVIDER_ID_DENTAL: string = 'wa21156026d';
+export const PROVIDER_ID_DENTAL: string = 'wa21156026b'; // North Seattle
 export const PROVIDER_ID_WAITING_ROOM: string = 'wa211102164';
 export const PROVIDER_ID_URGENT_CARE: string = 'wa211119151';
 

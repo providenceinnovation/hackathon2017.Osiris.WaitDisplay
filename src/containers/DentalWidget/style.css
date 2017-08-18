@@ -1,55 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
 .main {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: repeat(5, auto-fit);
-  grid-row-gap: 6px;
-  grid-column-gap: 10px;
-  width: 355px;
-
-  font-family: 'Open Sans',Verdana,Helvetica,sans-serif;
-  font-size: 12px;
+  background-color: white;
+  font-family: 'Roboto',Verdana,Helvetica,sans-serif;
+  font-size: 18px;
   line-height: 1.42857143;
   color: #23221f;
 
   margin: 3px;
-}
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
+}
+.availabilityGrid {
+  display: grid;
+  grid-template-columns: 18px 385px;
+  grid-template-rows: repeat(4, auto-fit);
+  grid-row-gap: 6px;
+  grid-column-gap: 10px;
+}
+.acceptingNowIcon {
+  grid-row: 1;
+  grid-column: 1;
+
+}
 .acceptingNowLabel {
   grid-row: 1;
-  grid-column: 1 / span 2;
+  grid-column: 2;
 
   font-weight: 800;
+}
+.acceptingEmergencyNowIcon {
+  grid-row: 2;
+  grid-column: 1;
+
 }
 
 .acceptingEmergencyNowLabel {
   grid-row: 2;
-  grid-column: 1 / span 2;
+  grid-column: 2;
 
   font-weight: 800;
 }
 
 .openAdultApptLabel {
   grid-row: 3;
-  grid-column: 1;
+  grid-column: 2;
 }
 
 .openAdultApptValue {
   grid-row: 3;
-  grid-column: 2;
+  grid-column: 1;
+  color: #a4cdff;
 }
 
 .openPediatricApptLabel{
   grid-row: 4;
-  grid-column: 1;
+  grid-column: 2;
 }
 
 .openPediatricApptValue {
   grid-row: 4;
-  grid-column: 2;
+  grid-column: 1;
+  color: #a4cdff;
+}
+
+.updatedGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, auto-fit);
+  grid-row-gap: 6px;
+  grid-column-gap: 5px;
+
+  font-family: 'Roboto',Verdana,Helvetica,sans-serif;
+  font-size: 16px;
+  line-height: 1.42857143;
+  color: #23221f;
+
+  margin: 3px;
+
 }
 
 .lastUpdatedLabel {
-  grid-row: 5;
+  grid-row: 1;
   grid-column: 1;
   text-align: right;
   font-weight: 800;
@@ -60,10 +92,22 @@
 }
 
 .lastUpdatedValue {
-  grid-row: 5;
+  grid-row: 1;
   grid-column: 2;
 
   font-size: 10px;
 
   color: gray;
+}
+
+.poweredByLabel {
+  grid-row: 2;
+  grid-column:1;
+  color: lightgray;
+  font-size: 14px;
+}
+.poweredByImage {
+  grid-row: 2;
+  grid-column:2;
+
 }

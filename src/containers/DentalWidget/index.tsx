@@ -66,32 +66,49 @@ export class DentalWidget extends React.Component<DentalWidget.Props, DentalWidg
       openPediatricAppointments,
       acceptingNow,
       acceptingEmergency } = this.state;
-
+    var appointmentsVisibleStage = (this.state.acceptingNow || this.state.acceptingEmergency) ? 'visible' : 'hidden';
     return (
       <div className={style.main}>
-        <div className={style.acceptingNowLabel}>
-          { this.state.acceptingNow ? 'Currently accepting patients.' : 'Not accepting patients today.' }
+
+        <div className={style.availabilityGrid}>
+          <div className={style.acceptingNowIcon}>
+            <img src={this.state.acceptingNow ?  require('../../images/Accepting.png') : require('../../images/NotAccepting.png')} />
+          </div>
+          <div className={style.acceptingNowLabel}>
+            { this.state.acceptingNow ? 'Currently accepting patients.' : 'Not accepting patients today.' }
+          </div>
+          <div className={style.acceptingEmergencyNowIcon}>
+            <img src={this.state.acceptingEmergency ?  require('../../images/Emergency.png') : require('../../images/NoEmergency.png')} />
+          </div>
+          <div className={style.acceptingEmergencyNowLabel}>
+            { this.state.acceptingEmergency ? 'Currently accepting emergency patients.' : 'Not accepting emergency patients today.' }
+          </div>
+          <div className={style.openAdultApptValue} style={{visibility: appointmentsVisibleStage}}>
+            {openAdultAppointments}
+          </div>
+          <div className={style.openAdultApptLabel} style={{visibility: appointmentsVisibleStage}}>
+            Open Adult Appointments
+          </div>
+          <div className={style.openPediatricApptValue} style={{visibility: appointmentsVisibleStage}}>
+            {openPediatricAppointments}
+          </div>
+          <div className={style.openPediatricApptLabel} style={{visibility: appointmentsVisibleStage}}>
+            Open Pediatric Appointments
+          </div>
         </div>
-        <div className={style.acceptingEmergencyNowLabel}>
-          { this.state.acceptingEmergency ? 'Currently accepting emergency patients.' : 'Not accepting emergency patients today.' }
-        </div>
-        <div className={style.openAdultApptLabel}>
-          Open Adult Appointments:
-        </div>
-        <div className={style.openAdultApptValue}>
-          {openAdultAppointments}
-        </div>
-        <div className={style.openPediatricApptLabel}>
-          Open Pediatric Appointments:
-        </div>
-        <div className={style.openPediatricApptValue}>
-          {openPediatricAppointments}
-        </div>
-        <div className={style.lastUpdatedLabel}>
-          Last Updated:
-        </div>
-        <div className={style.lastUpdatedValue}>
-        { moment().format('YYYY-MM-DD h:mm:ss a') }
+        <div className={style.updatedGrid}>
+          <div className={style.lastUpdatedLabel} style={{visibility: appointmentsVisibleStage}}>
+            Last Updated:
+          </div>
+          <div className={style.lastUpdatedValue}>
+          { moment().format('YYYY-MM-DD h:mm:ss a') }
+          </div>
+          <div className={style.poweredByLabel}>
+            Real time availability data supported by DIG
+          </div>
+          <div className={style.poweredByImage}>
+            <img src={require('../../images/logo-dig.png')} />
+          </div>
         </div>
       </div>
     );
