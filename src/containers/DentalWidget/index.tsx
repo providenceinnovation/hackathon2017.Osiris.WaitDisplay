@@ -20,6 +20,7 @@ export namespace DentalWidget {
     openPediatricAppointments: string,
     acceptingNow?: boolean,
     acceptingEmergency?: boolean,
+    updateDateTime?: string,
   }
 }
 
@@ -34,6 +35,7 @@ export class DentalWidget extends React.Component<DentalWidget.Props, DentalWidg
       openPediatricAppointments: "0",
       acceptingNow: undefined,
       acceptingEmergency: undefined,
+      updateDateTime: moment().format('MM/DD/YYYY h:mm a'),
     };
   }
 
@@ -51,6 +53,9 @@ export class DentalWidget extends React.Component<DentalWidget.Props, DentalWidg
     });
     realTimeManager.startListener(this.state.providerID, NUMBER_OF_DENTAL_APPTS_PEDIATRIC, (updatedValue) => {
       this.setState({openPediatricAppointments: updatedValue.value});
+    });
+    realTimeManager.startListener(this.state.providerID, 'updateDateTime', (updatedValue) => {
+      this.setState({updateDateTime: updatedValue });
     });
   }
 
@@ -75,13 +80,13 @@ export class DentalWidget extends React.Component<DentalWidget.Props, DentalWidg
             <img src={this.state.acceptingNow ?  require('../../images/Accepting.png') : require('../../images/NotAccepting.png')} />
           </div>
           <div className={style.acceptingNowLabel}>
-            { this.state.acceptingNow ? 'Currently accepting patients.' : 'Not accepting patients today.' }
+            { this.state.acceptingNow ? 'Accepting patients.' : 'Not accepting patients' }
           </div>
           <div className={style.acceptingEmergencyNowIcon}>
             <img src={this.state.acceptingEmergency ?  require('../../images/Emergency.png') : require('../../images/NoEmergency.png')} />
           </div>
           <div className={style.acceptingEmergencyNowLabel}>
-            { this.state.acceptingEmergency ? 'Currently accepting emergency patients.' : 'Not accepting emergency patients today.' }
+            { this.state.acceptingEmergency ? 'Accepting emergency patients.' : 'Not accepting emergency patients' }
           </div>
           <div className={style.openAdultApptValue} style={{visibility: appointmentsVisibleStage}}>
             {openAdultAppointments}
@@ -101,7 +106,7 @@ export class DentalWidget extends React.Component<DentalWidget.Props, DentalWidg
             Last Updated:
           </div>
           <div className={style.lastUpdatedValue}>
-          { moment().format('YYYY-MM-DD h:mm:ss a') }
+          { moment(this.state.updateDateTime).format('MM/DD/YYYY h:mm a')}
           </div>
           <div className={style.poweredByLabel}>
             Real time availability data supported by DIG

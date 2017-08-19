@@ -1,0 +1,405 @@
+{
+  "providers" : {
+    "examplenew123" : {
+      "description" : "fabulous new service",
+      "locationIndex" : 0,
+      "name" : "A new service we are tracking",
+      "provider" : "New Provider Name",
+      "status" : "active",
+      "updateDateTime" : "2017-08-10T17:32:16.758Z"
+    },
+    "examplenew1234" : {
+      "description" : "fabulous new service",
+      "locationIndex" : 0,
+      "name" : "A new service we are tracking",
+      "provider" : "New Provider Name",
+      "status" : "active",
+      "updateDateTime" : 1502320149821
+    },
+    "wa211102164" : {
+      "description" : "Provides a daily drop-in center for women; no children allowed.\n\nOffers: \n\n-  Limited emergency food\n\n-  Breakfast and lunch\n\n-  Cooking facilities \n\n-  Laundry facilities\n\n-  Shower facilities with wheelchair accessibility, grab bars and a shower chair\n\n-  Hygiene kits \n\n\n\nAdditionally provides: \n\n-  Use of computers, internet, fax, phone and copy machine to help with job and housing searches \n\n-  An address for receiving mail \n\n-  A kitchen and cooking supplies; women can cook throughout the day up until 3:30pm \n\n\n\nOffers optional ongoing case management services with information, referral and advocacy for various needs. \n\nClients are welcome to stay at the center all day or simply drop in for one kind of assistance. \n\nFood and snacks are usually available throughout the day, not only at mealtimes.\n\nInterpreter services are available by advance request.",
+      "locationIndex" : 0,
+      "name" : "Women's Drop-In Center",
+      "provider" : "Elizabeth Gregory Home",
+      "status" : "active",
+      "updateDateTime" : "2017-08-04T18:24:43.701Z"
+    },
+    "wa211119151" : {
+      "acceptedInsurance" : {
+        "Aetna" : true,
+        "American Family Insurance" : true,
+        "Berkshire Hathaway" : true,
+        "Blue Cross Blue Shield" : true,
+        "Cigna Health Spring" : true,
+        "Colonial Life" : true,
+        "Esurance" : true,
+        "Farmers Insurance" : true,
+        "General RE" : true,
+        "Ironshore" : true,
+        "Mass Mutual" : true,
+        "Medicaid" : true,
+        "Medicare" : true,
+        "Met Life" : true
+      },
+      "description" : "Provides individual, couples and family counseling as well as group therapy, psychiatric assessments and medication prescription and psychological testing;  limited treatment for children.\n\n\n\nAgency provides DBHR-certified service(s).",
+      "id" : "wa211.11915.1",
+      "name" : "Child and Family Services",
+      "provider" : "Sound Mental Health",
+      "status" : "active",
+      "updateDateTime" : "2017-08-04T18:24:43.717Z"
+    },
+    "wa211134271" : {
+      "description" : "Matches volunteers with low-income seniors and low-income adults with disabilities in King County to assist with basic household chores such as:\n\n-  Food preparation\n\n-  Grocery shopping\n\n-  Home repairs\n\n-  Housekeeping\n\n-  Laundry\n\n-  Yardwork\n\n\n\nMay also assist with transportation to medical appointments, grocery stores, food banks and other essential errands.\n\n \n\nServices are provided based on volunteer availability. \n\nDue to the high number of requests and limited number of volunteers, may be unable to offer services to all callers.",
+      "locationIndex" : 1,
+      "name" : "Volunteer Services",
+      "provider" : "Catholic Community Services - Volunteer Services",
+      "status" : "active",
+      "updateDateTime" : "2017-08-10T19:01:10.144Z",
+      "waitTime" : 50
+    },
+    "wa21156022" : {
+      "description" : "Holds clinics at free meal programs and tent cities, providing basic medical care to homeless individuals and families living in south King County and Seattle.\n\nA doctor or nurse provides exams and treatment. Program does not carry narcotics or provide any prescription pain medication. \n\nAlso offers\n\n-  HIV tests, STD, and Hep C tests, pregnancy tests and birth control. \n\n-  Harm reduction services including clean needles and naloxone overdose prevention kits \n\n-  Brief counseling sessions and referrals to ongoing mental health care\n\n-  Some sites additionally have mobile dental care (services focus on treating dental pain NOT preventative cleanings).\n\n\n\nSome sites additionally have dental care. \n\nCan also assist homeless people in locating help with: \n\n-  A doctor's office that can provide follow-up care\n\n-   Enrollment into health insurance\n\n-  Referrals to shelter, food banks, legal assistance and domestic violence programs",
+      "id" : "wa211.5602.2",
+      "name" : "Mobile Medical Van for Homeless People",
+      "provider" : "Public Health - Seattle & King County - Public Health Centers",
+      "status" : "active",
+      "updateDateTime" : "2017-08-10T22:31:43.267Z"
+    },
+    "wa21156026a" : {
+      "acceptedInsurance" : {
+        "Cigna" : true,
+        "PHP" : true
+      },
+      "description" : "Offers general dental care services.\n\nHours: Monday - Friday, 8:30 am to 5:30 pm\n\nClients served:\n- Children ages 1 through 18 years old\n- Parents of child patients if Medicaid eligible\n- Low income pregnant women\n- Low income adults 19+ if Medicaid eligible",
+      "id" : "wa211.5602.6a",
+      "name" : "Columbia Public Health Center Dental Clinic",
+      "provider" : "Public Health - Seattle & King County - Public Health Centers",
+      "status" : "active",
+      "updateDateTime" : "2017-08-10T22:31:43.267Z"
+    },
+    "wa21156026b" : {
+      "description" : "Offers general dental care services.\n\nHours: Monday - Friday, 8 am to 5 pm\n\nClients served:\n- Children ages 1 through 18 years old\n- Low income pregnant women\n- Homeless teens and adults (ages 13 and up)\n- Parents of child patients if Medicaid eligible\n- Low income adults 19+ if Medicaid eligible",
+      "id" : "wa211.5602.6b",
+      "name" : "North Seattle Dental Clinic",
+      "provider" : "Public Health - Seattle & King County - Public Health Centers",
+      "status" : "active",
+      "updateDateTime" : "2017-08-10T22:31:43.267Z"
+    },
+    "wa21156026c" : {
+      "description" : "Offers general dental care services.\n\nHours:\nMonday, Tuesday, Thursday, Friday: 8:00 am to 5:00 pm\nWednesdays:\n- 1st Wednesday of the month: 10:30 am - 5:30 pm\n- 4th Wednesday of the month: 9:30 am - 5:30 pm\n- All other Wednesdays: 8:30 am - 5:30 pm\n\nClients served:\n- Children ages 1 through 18 years old\n- Parents of child patients if Medicaid eligible\n- Low income pregnant women\n- Low income adults 19+ if Medicaid eligible",
+      "id" : "wa211.5602.6c",
+      "name" : "Eastgate Public Health Center Dental Clinic",
+      "provider" : "Public Health - Seattle & King County - Public Health Centers",
+      "status" : "active",
+      "updateDateTime" : "2017-08-10T22:31:43.267Z"
+    },
+    "wa21156026d" : {
+      "description" : "Offers general dental care services.\n\nHours: Monday - Friday, 8:00 am to 5:00 pm\n\nClients served:\n- Children ages 1 through 18 years old\n- Parents of child patients if Medicaid eligible\n- Low income pregnant women\n- Low income adults 19+ if Medicaid eligible",
+      "id" : "wa211.5602.6d",
+      "name" : "Renton Public Health Center Dental Clinic",
+      "provider" : "Public Health - Seattle & King County - Public Health Centers",
+      "status" : "active",
+      "updateDateTime" : "2017-08-10T22:31:43.267Z"
+    },
+    "wa21156026e" : {
+      "description" : "Downtown Public Health Center\n2124 4th Ave.\nSeattle, WA 98121\n206-477-8300\n\nOffers general dental care services.\n\nHours: Monday - Friday, 8 am to 5 pm\n\nClients served:\n- Homeless clients ages 13 and up",
+      "id" : "wa211.5602.6e",
+      "name" : "Downtown Public Health Center Dental Clinic",
+      "provider" : "Public Health - Seattle & King County - Public Health Centers",
+      "status" : "active",
+      "updateDateTime" : "2017-08-10T22:31:43.267Z"
+    }
+  },
+  "realtime" : {
+    "wa2000test" : {
+      "acceptedInsurance" : {
+        "Aetna" : true,
+        "Cigna" : {
+          "value" : false
+        }
+      },
+      "acceptingNow" : {
+        "value" : true
+      },
+      "waitTime" : {
+        "value" : 10
+      }
+    },
+    "wa211102164" : {
+      "acceptedInsurance" : {
+        "serviceType" : "acceptedInsurance",
+        "updateDateTime" : "2017-08-10T21:11:03.118Z",
+        "value" : [ {
+          "description" : "Cigna",
+          "value" : true
+        }, {
+          "description" : "Medicaid (Apple Health)",
+          "value" : true
+        }, {
+          "description" : "Self Pay",
+          "value" : true
+        }, {
+          "description" : "Premera",
+          "value" : true
+        }, {
+          "description" : "LifeWise",
+          "value " : true
+        }, {
+          "description" : "Medicare",
+          "value" : false
+        }, {
+          "description" : "Regence",
+          "value" : true
+        }, {
+          "description" : "United Health Care",
+          "value" : true
+        } ]
+      },
+      "acceptingNow" : {
+        "serviceType" : "acceptingNow",
+        "updateDateTime" : "2017-08-11T00:03:09.708Z",
+        "value" : false
+      },
+      "numberOfBeds" : {
+        "serviceType" : "numberOfBeds",
+        "updateDateTime" : "2017-08-10T19:01:10.144Z",
+        "value" : 10
+      },
+      "waitTime" : {
+        "serviceType" : "waitTime",
+        "updateDateTime" : "2017-08-11T00:17:31.446Z",
+        "value" : 75
+      }
+    },
+    "wa211119151" : {
+      "acceptedInsurance" : {
+        "value" : {
+          "Aetna" : {
+            "value" : false
+          },
+          "American Family Insurance" : {
+            "value" : true
+          },
+          "Berkshire Hathaway" : {
+            "value" : false
+          },
+          "Blue Cross Blue Shield" : {
+            "value" : false
+          },
+          "Cigna Health Spring" : {
+            "value" : false
+          },
+          "Colonial Life" : {
+            "value" : false
+          },
+          "Esurance" : {
+            "value" : false
+          },
+          "Farmers Insurance" : {
+            "value" : true
+          },
+          "General RE" : {
+            "value" : false
+          },
+          "Ironshore" : {
+            "value" : false
+          },
+          "Mass Mutual" : {
+            "value" : false
+          },
+          "Medicaid" : {
+            "value" : true
+          },
+          "Medicare" : {
+            "value" : false
+          },
+          "Met Life" : {
+            "value" : true
+          }
+        }
+      },
+      "acceptingNow" : {
+        "value" : true
+      },
+      "numberOfBeds" : {
+        "value" : 5
+      },
+      "waitTime" : {
+        "value" : 15
+      }
+    },
+    "wa211134271" : {
+      "acceptedInsurance" : {
+        "updateDateTime" : "2017-08-11T00:17:31.449Z"
+      },
+      "acceptingEmergencyNow" : {
+        "serviceType" : "acceptingEmergencyNow",
+        "value" : true
+      },
+      "acceptingNow" : {
+        "serviceType" : "acceptingNow",
+        "updateDateTime" : "2017-08-10T19:01:10.144Z",
+        "value" : true
+      },
+      "numberDentalAppointmentsAdult" : {
+        "serviceType" : "numberDentalAppointmentsAdult",
+        "updateDateTime" : "2017-08-10T19:01:10.144Z",
+        "value" : 0
+      },
+      "numberDentalAppointmentsChildren" : {
+        "serviceType" : "numberDentalAppointmentsChildren",
+        "updateDateTime" : "2017-08-10T19:01:10.144Z",
+        "value" : 0
+      }
+    },
+    "wa21156026a" : {
+      "acceptingEmergencyNow" : {
+        "serviceType" : "acceptingEmergencyNow",
+        "value" : true
+      },
+      "acceptingNow" : {
+        "serviceType" : "acceptingNow",
+        "updateDateTime" : "2017-08-10T19:01:10.144Z",
+        "value" : true
+      },
+      "numberDentalAppointmentsAdult" : {
+        "serviceType" : "numberDentalAppointmentsAdult",
+        "updateDateTime" : "2017-08-10T19:01:10.144Z",
+        "value" : 2
+      },
+      "numberDentalAppointmentsChildren" : {
+        "serviceType" : "numberDentalAppointmentsChildren",
+        "updateDateTime" : "2017-08-10T19:01:10.144Z",
+        "value" : 4
+      }
+    },
+    "wa21156026b" : {
+      "acceptingEmergencyNow" : {
+        "serviceType" : "acceptingEmergencyNow",
+        "value" : true
+      },
+      "acceptingNow" : {
+        "serviceType" : "acceptingNow",
+        "updateDateTime" : "2017-08-10T19:01:10.144Z",
+        "value" : true
+      },
+      "numberDentalAppointmentsAdult" : {
+        "serviceType" : "numberDentalAppointmentsAdult",
+        "updateDateTime" : "2017-08-10T19:01:10.144Z",
+        "value" : 3
+      },
+      "numberDentalAppointmentsChildren" : {
+        "serviceType" : "numberDentalAppointmentsChildren",
+        "updateDateTime" : "2017-08-10T19:01:10.144Z",
+        "value" : 2
+      }
+    },
+    "wa21156026c" : {
+      "acceptingEmergencyNow" : {
+        "serviceType" : "acceptingEmergencyNow",
+        "value" : true
+      },
+      "acceptingNow" : {
+        "serviceType" : "acceptingNow",
+        "updateDateTime" : "2017-08-10T19:01:10.144Z",
+        "value" : true
+      },
+      "numberDentalAppointmentsAdult" : {
+        "serviceType" : "numberDentalAppointmentsAdult",
+        "updateDateTime" : "2017-08-10T19:01:10.144Z",
+        "value" : 2
+      },
+      "numberDentalAppointmentsChildren" : {
+        "serviceType" : "numberDentalAppointmentsChildren",
+        "updateDateTime" : "2017-08-10T19:01:10.144Z",
+        "value" : 0
+      }
+    },
+    "wa21156026d" : {
+      "acceptingEmergencyNow" : {
+        "serviceType" : "acceptingEmergencyNow",
+        "value" : true
+      },
+      "acceptingNow" : {
+        "serviceType" : "acceptingNow",
+        "updateDateTime" : "2017-08-10T19:01:10.144Z",
+        "value" : true
+      },
+      "numberDentalAppointmentsAdult" : {
+        "serviceType" : "numberDentalAppointmentsAdult",
+        "updateDateTime" : "2017-08-10T19:01:10.144Z",
+        "value" : 6
+      },
+      "numberDentalAppointmentsChildren" : {
+        "serviceType" : "numberDentalAppointmentsChildren",
+        "updateDateTime" : "2017-08-10T19:01:10.144Z",
+        "value" : 9
+      }
+    },
+    "wa21156026e" : {
+      "acceptingEmergencyNow" : {
+        "serviceType" : "acceptingEmergencyNow",
+        "value" : true
+      },
+      "acceptingNow" : {
+        "serviceType" : "acceptingNow",
+        "updateDateTime" : "2017-08-10T19:01:10.144Z",
+        "value" : true
+      },
+      "numberDentalAppointmentsAdult" : {
+        "serviceType" : "numberDentalAppointmentsAdult",
+        "updateDateTime" : "2017-08-10T19:01:10.144Z",
+        "value" : 0
+      },
+      "numberDentalAppointmentsChildren" : {
+        "serviceType" : "numberDentalAppointmentsChildren",
+        "updateDateTime" : "2017-08-10T19:01:10.144Z",
+        "value" : 0
+      }
+    }
+  },
+  "serviceTypes" : {
+    "acceptedInsurance" : {
+      "dataType" : "toggleList",
+      "description" : "Accepted Insurance Providers",
+      "shortDescription" : "Insurance Providers"
+    },
+    "acceptingEmergencyNow" : {
+      "dataType" : "toggleSwitch",
+      "description" : "Accepting Emergency Appointments",
+      "shortDescription" : "Emergency?"
+    },
+    "acceptingNow" : {
+      "dataType" : "toggleSwitch",
+      "description" : "Accepting Patients?",
+      "shortDescription" : "Accepting?"
+    },
+    "numberDentalAppointmentsAdult" : {
+      "dataType" : "numberCounter",
+      "description" : "Available appointments (Adult)",
+      "shortDescription" : "Adults"
+    },
+    "numberDentalAppointmentsChildren" : {
+      "dataType" : "numberCounter",
+      "description" : "Available appointments (Children)",
+      "shortDescription" : "Children"
+    },
+    "numberOfBeds" : {
+      "dataType" : "numberCounter",
+      "description" : "Number of Beds",
+      "shortDescription" : "# of Beds"
+    },
+    "numberOfNebulizers" : {
+      "dataType" : "numberCounter",
+      "description" : "Number of Nebulizers Available",
+      "shortDescription" : "# of Nebulizers"
+    },
+    "waitTime" : {
+      "dataType" : "numberSlider",
+      "description" : "Current Wait Time (minutes)",
+      "max" : 200,
+      "min" : 0,
+      "shortDescription" : "Wait Time"
+    }
+  }
+}
