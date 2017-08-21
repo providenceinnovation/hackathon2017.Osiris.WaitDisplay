@@ -95,22 +95,26 @@ https://osiris-26b00.firebaseapp.com/dentalWidget/?providerID=wa21156026a
 ```
 
 ## Renton Public Health - Dental Use Case
-Paste the html below into the site under the "Interpreter Services" section.
+Paste the html below into the site under the "Clients Served" section.
 
-http://www.kingcounty.gov/depts/health/locations/renton.aspx
+http://www.kingcounty.gov/depts/health/locations/north/dental-clinic.aspx
 
 ```
-<div class="row addon-row addon-row-attached">
-  <div class="col-sm-6">
-    <div>
-      <span></span>
-      <span style="font-size: 1.4em; font-weight: 700;">Current Availability</span>
-    </div>
-    <br>
-    <iframe src="https://osiris-26b00.firebaseapp.com/dentalWidget/" allowfullscreen="" frameborder="0"
-      style="width: 100%; height: 230px;"></iframe>
-    </div>
-</div>
+<table class="table">
+  <tbody>
+    <tr>
+      <td>
+        <div><span class="fa fa-2x fa-color-default pull-left">
+        <img src="https://osiris-26b00.firebaseapp.com/CareIQLogo.png">
+        </span> <strong><font size="4">Current Availability</font></strong>
+        </div>
+      <div>
+    <iframe src="https://osiris-26b00.firebaseapp.com/dentalWidget/" allowfullscreen="" frameborder="0" style="width: 100%; height: 260px;border-color:white;border-style:none;background-color:white;" seamless="seamless" scrolling="no"></iframe>
+        </div>
+    </td>
+    </tr>
+  </tbody>
+</table>
 ```
 
 ## Sound Mental Health - Urgent Care Use Case

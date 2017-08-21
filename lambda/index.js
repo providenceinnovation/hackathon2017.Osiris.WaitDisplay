@@ -2,7 +2,7 @@
 
 let https = require('https');
 const firebaseHost = 'osiris-26b00.firebaseio.com';
-const testProviderId = 'wa2000test';
+const testProviderId = 'wa211119151';
 const INCREMENT = 'INCREMENT';
 const DECREMENT = 'DECREMENT';
 const RESET = 'RESET';

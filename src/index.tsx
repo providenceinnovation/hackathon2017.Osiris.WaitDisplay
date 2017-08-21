@@ -11,7 +11,7 @@ import { WaitTimeWidget } from './containers/WaitTimeWidget';
 import { DentalWidget } from './containers/DentalWidget';
 
 require('../assets/manifest.json');
-
+require('../assets/CareIQLogo.png');
 const store = configureStore();
 const history = createBrowserHistory();
 

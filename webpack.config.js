@@ -94,6 +94,18 @@ module.exports = {
           },
         }
       },
+      {
+        test: /\.png$/,
+        include: [
+          assetsPath
+        ],
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]'
+          },
+        },
+      },
     ],
   },
   plugins: [

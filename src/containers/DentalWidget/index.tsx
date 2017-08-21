@@ -102,14 +102,14 @@ export class DentalWidget extends React.Component<DentalWidget.Props, DentalWidg
           </div>
         </div>
         <div className={style.updatedGrid}>
-          <div className={style.lastUpdatedLabel} style={{visibility: appointmentsVisibleStage}}>
+          <div className={style.lastUpdatedLabel}>
             Last Updated:
           </div>
           <div className={style.lastUpdatedValue}>
           { moment(this.state.updateDateTime).format('MM/DD/YYYY h:mm a')}
           </div>
           <div className={style.poweredByLabel}>
-            Real time availability data supported by DIG
+            Real time availability data supported by
           </div>
           <div className={style.poweredByImage}>
             <img src={require('../../images/logo-dig.png')} />
