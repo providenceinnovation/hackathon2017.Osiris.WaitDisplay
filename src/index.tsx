@@ -12,6 +12,7 @@ import { DentalWidget } from './containers/DentalWidget';
 
 require('../assets/manifest.json');
 require('../assets/CareIQLogo.png');
+require('../assets/favicon.ico');
 const store = configureStore();
 const history = createBrowserHistory();
 

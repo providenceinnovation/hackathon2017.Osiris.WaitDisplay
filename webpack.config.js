@@ -95,7 +95,7 @@ module.exports = {
         }
       },
       {
-        test: /\.png$/,
+        test: /\.png$|\.ico$/,
         include: [
           assetsPath
         ],
