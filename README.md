@@ -95,7 +95,7 @@ https://osiris-26b00.firebaseapp.com/dentalWidget/?providerID=wa21156026a
 ```
 
 ## Renton Public Health - Dental Use Case
-Paste the html below into the site under the "Clients Served" section.
+Paste the html below into the site under the "Clients Served" section (after the closing ul tag but before the div tag for the left side section.
 
 http://www.kingcounty.gov/depts/health/locations/north/dental-clinic.aspx
 
@@ -105,16 +105,19 @@ http://www.kingcounty.gov/depts/health/locations/north/dental-clinic.aspx
     <tr>
       <td>
         <div><span class="fa fa-2x fa-color-default pull-left">
-        <img src="https://osiris-26b00.firebaseapp.com/CareIQLogo.png">
+        <img src="https://osiris-26b00.firebaseapp.com/CareIQLogo.png" style="width:28px;height:28px;">
         </span> <strong><font size="4">Current Availability</font></strong>
         </div>
-      <div>
-    <iframe src="https://osiris-26b00.firebaseapp.com/dentalWidget/" allowfullscreen="" frameborder="0" style="width: 100%; height: 260px;border-color:white;border-style:none;background-color:white;" seamless="seamless" scrolling="no"></iframe>
+        <div style="padding-top:20px;">
+          <iframe src="https://osiris-26b00.firebaseapp.com/dentalWidget/" allowfullscreen=""
+            style="width: 100%;height: 270px;border: 0px;background-color: white;padding: 0;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"
+            seamless="seamless" scrolling="no"></iframe>
         </div>
-    </td>
+      </td>
     </tr>
   </tbody>
 </table>
+
 ```
 
 ## Sound Mental Health - Urgent Care Use Case
