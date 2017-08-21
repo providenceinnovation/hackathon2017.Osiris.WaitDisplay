@@ -1,3 +1,4 @@
+export { LastUpdated } from './LastUpdated';
 export { NumberCounterUpdater } from './NumberCounterUpdater';
 export { NumberSliderUpdater } from './NumberSliderUpdater';
 export { ServiceLocationUpdater } from './ServiceLocationUpdater';

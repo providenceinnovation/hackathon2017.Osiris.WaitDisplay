@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { RouteComponentProps } from 'react-router';
 import { RootState } from '../../reducers';
-import { ServiceLocationUpdater } from '../../components';
+import { ServiceLocationUpdater, LastUpdated } from '../../components';
 import * as realTimeManager from '../../utils/realTimeManager';
 
 /* Container used to update for multiple services */
@@ -42,7 +42,8 @@ export class ControllerMulti extends React.Component<ControllerMulti.Props, Cont
         <div className={style.componentContainer} >
           <div className={style.componentHeader} >
             <div>
-              <span>Update Clinic Availability</span><span className={style.lastUpdated}>LAST UPDATE 08/10/17 04:43PM</span>
+              <span>Update Clinic Availability</span>
+              <LastUpdated providerID="wa21156026b" />
             </div>
             <div>
               <img src={require('../../images/BedAvailability.png')} />

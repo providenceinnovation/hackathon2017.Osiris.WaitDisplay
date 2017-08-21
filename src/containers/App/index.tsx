@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { RouteComponentProps } from 'react-router';
 import { RootState } from '../../reducers';
-import { WaitTime, Toggle, ToggleList } from '../../components';
+import { WaitTime, Toggle, ToggleList, LastUpdated } from '../../components';
 import * as realTimeManager from '../../utils/realTimeManager';
 
 export namespace App {
@@ -37,7 +37,8 @@ export class App extends React.Component<App.Props, App.State> {
           <div className={style.componentContainer}>
             <div className={style.componentHeader} >
               <div>
-                <span>Welcome to the Waiting Room</span><span className={style.lastUpdated}> LAST UPDATE 08/10/17 04:43PM</span>
+                <span>Welcome to the Waiting Room</span>
+                <LastUpdated providerID={providerID} />
               </div>
             </div>
             <div className={style.componentContainerLayout}>

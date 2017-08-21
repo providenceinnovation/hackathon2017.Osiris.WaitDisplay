@@ -1,0 +1,17 @@
+.main {
+  font-size: 11px;
+  line-height: 24pt;
+  letter-spacing: 0.9pt;
+  font-weight: 300;
+  margin-left: 20px;
+}
+
+.lastUpdatedLabel {
+  color: gray;
+  text-transform: uppercase;
+}
+
+.lastUpdatedValue {
+  margin-left:10px;
+  color: gray;
+}

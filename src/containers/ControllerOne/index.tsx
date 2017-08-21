@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { RouteComponentProps } from 'react-router';
 import { RootState } from '../../reducers';
+import { LastUpdated } from '../../components';
 import { NumberCounterUpdater } from '../../components';
 import { ToggleUpdater } from '../../components';
 import { ToggleListUpdater } from '../../components';
@@ -38,7 +39,8 @@ export class ControllerOne extends React.Component<ControllerOne.Props, Controll
         <div className={style.componentContainer}>
           <div className={style.componentHeader} >
             <div>
-              <span>Update Clinic Availability</span><span className={style.lastUpdated}> LAST UPDATE 08/10/17 04:43PM</span>
+              <span>Update Clinic Availability</span>
+              <LastUpdated providerID={providerID} />
             </div>
           </div>
           <div className={style.componentContainerLayout}>
