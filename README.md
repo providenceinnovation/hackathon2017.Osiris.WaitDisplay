@@ -84,8 +84,28 @@ https://console.firebase.google.com/project/osiris-26b00/database/data/providers
 firebase deploy --only functions
 ```
 
+# Live Demo
 
-# Embeddable Widget
+## Emergency Room 
+The emergency room case would allow an employee to live update the waiting room availablity.  The updates would be reflected on a display in the waiting room or on a website hosting the display widget.
+### Controller
+https://osiris-26b00.firebaseapp.com/urgentcare
+
+### Display Dashboard
+https://osiris-26b00.firebaseapp.com/
+### Display Widget
+https://osiris-26b00.firebaseapp.com/waitTimeWidget
+
+
+## Dental Office
+The dental office use case allows social services to update the availablity of dental clinic locations so patients know if the location is currently acccepting new patients and if there are appointments open.
+### Controller
+https://osiris-26b00.firebaseapp.com/dental
+
+### Display Widget
+https://osiris-26b00.firebaseapp.com/dentalWidget
+
+## Embeddable Widget
 
 The code below describes how to embed widgets on host sites.  These widgets update in realtime and are hosted in iFrames.
 If you want to change the provider then you can pass a providerID on the query string using the provider key from Firebase.
