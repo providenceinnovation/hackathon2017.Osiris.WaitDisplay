@@ -1,3 +1,6 @@
+# Hackathon 2017 - RealTime Waiting Room and Dental Appointment Availability
+This project is the 2017 hackathon winner at DIG.  Utilizing Firebase and React controllers and dashboards were created to allow realtime updates to occur for two different uses cases.  See more below for a live demo.
+
 # Frontend Boilerplate with React, Redux & TypeScript
 
 A bare minimum react-redux-webpack-typescript boilerplate with TodoMVC example.
@@ -95,7 +98,7 @@ https://osiris-26b00.firebaseapp.com/urgentcare
 ### Display Dashboard
 https://osiris-26b00.firebaseapp.com/
 
-![Alt text](docs/assets/waitingroom-dashboard.png?raw=true "Waiting Room Display Dashboard")
+![Alt text](docs/assets/WaitingRoom-Dashboard.png?raw=true "Waiting Room Display Dashboard")
 ### Display Widget
 https://osiris-26b00.firebaseapp.com/waitTimeWidget
 
