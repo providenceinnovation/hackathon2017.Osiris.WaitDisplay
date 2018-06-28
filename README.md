@@ -84,8 +84,32 @@ https://console.firebase.google.com/project/osiris-26b00/database/data/providers
 firebase deploy --only functions
 ```
 
+# Live Demo
 
-# Embeddable Widget
+## Waiting Room 
+The waiting room case would allow an employee to live update the waiting room availablity.  The updates would be reflected on a display in the waiting room or on a website hosting the display widget.
+
+### Controller
+https://osiris-26b00.firebaseapp.com/urgentcare
+
+### Display Dashboard
+https://osiris-26b00.firebaseapp.com/
+
+![Alt text](docs/waitingroom-dashboard.jpg?raw=true "Waiting Room Display Dashboard")
+### Display Widget
+https://osiris-26b00.firebaseapp.com/waitTimeWidget
+
+
+## Dental Office
+The dental office use case allows social services to update the availablity of dental clinic locations so patients know if the location is currently acccepting new patients and if there are appointments open.
+
+### Controller
+https://osiris-26b00.firebaseapp.com/dental
+
+### Display Widget
+https://osiris-26b00.firebaseapp.com/dentalWidget
+
+## How to Use Embeddable Widgets
 
 The code below describes how to embed widgets on host sites.  These widgets update in realtime and are hosted in iFrames.
 If you want to change the provider then you can pass a providerID on the query string using the provider key from Firebase.
@@ -94,7 +118,7 @@ If you want to change the provider then you can pass a providerID on the query s
 https://osiris-26b00.firebaseapp.com/dentalWidget/?providerID=wa21156026a
 ```
 
-## Renton Public Health - Dental Use Case
+### Renton Public Health - Dental Use Case
 Paste the html below into the site under the "Clients Served" section (after the closing ul tag but before the div tag for the left side section.
 
 http://www.kingcounty.gov/depts/health/locations/north/dental-clinic.aspx
@@ -120,7 +144,7 @@ http://www.kingcounty.gov/depts/health/locations/north/dental-clinic.aspx
 
 ```
 
-## Sound Mental Health - Urgent Care Use Case
+### Sound Mental Health - Urgent Care Use Case
 Paste the html below wherever you want.
 
 http://www.kingcounty.gov/depts/health/locations/renton.aspx
