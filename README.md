@@ -95,7 +95,7 @@ https://osiris-26b00.firebaseapp.com/urgentcare
 ### Display Dashboard
 https://osiris-26b00.firebaseapp.com/
 
-![Alt text](docs/waitingroom-dashboard.jpg?raw=true "Waiting Room Display Dashboard")
+![Alt text](docs/assets/waitingroom-dashboard.png?raw=true "Waiting Room Display Dashboard")
 ### Display Widget
 https://osiris-26b00.firebaseapp.com/waitTimeWidget
 
