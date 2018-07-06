@@ -1,3 +1,91 @@
+# Hackathon 2017 - RealTime Waiting Room and Dental Appointment Availability
+This project is the 2017 hackathon winner at DIG.  Utilizing Firebase and React controllers and dashboards were created to allow realtime updates to occur for two different uses cases.  See more below for a live demo.
+
+# Live Demo
+
+## Waiting Room 
+The waiting room case would allow an employee to live update the waiting room availablity.  The updates would be reflected on a display in the waiting room or on a website hosting the display widget.
+
+### Controller
+https://osiris-26b00.firebaseapp.com/urgentcare
+![Alt text](docs/assets/WaitingRoom-Controller.png?raw=true "Waiting Room Controller")
+
+### Display Dashboard
+https://osiris-26b00.firebaseapp.com/
+![Alt text](docs/assets/WaitingRoom-Dashboard.png?raw=true "Waiting Room Display Dashboard")
+
+### Display Widget
+https://osiris-26b00.firebaseapp.com/waitTimeWidget
+![Alt text](docs/assets/WaitingRoom-Widget.png?raw=true "Waiting Room Widget")
+
+## Dental Office
+The dental office use case allows social services to update the availablity of dental clinic locations so patients know if the location is currently acccepting new patients and if there are appointments open.
+This use case utilized the CareIQ website created by Providence Digital Innovation.  The plan was for the CareIQ site to surface the information about the dental clinics so it could be used to provider a richer dataset.
+https://www.careiq.org/
+
+### Controller
+https://osiris-26b00.firebaseapp.com/dental
+![Alt text](docs/assets/Dental-Controller.png?raw=true "Dental Controller")
+
+### Display Widget
+https://osiris-26b00.firebaseapp.com/dentalWidget
+![Alt text](docs/assets/Dental-Widget.png?raw=true "Dental Widget")
+
+## How to Use Embeddable Widgets
+
+The code below describes how to embed widgets on host sites.  These widgets update in realtime and are hosted in iFrames.
+If you want to change the provider then you can pass a providerID on the query string using the provider key from Firebase.
+
+```
+https://osiris-26b00.firebaseapp.com/dentalWidget/?providerID=wa21156026a
+```
+
+### Renton Public Health - Dental Use Case
+Paste the html below into the site under the "Clients Served" section (after the closing ul tag but before the div tag for the left side section.
+
+http://www.kingcounty.gov/depts/health/locations/north/dental-clinic.aspx
+
+```
+<table class="table">
+  <tbody>
+    <tr>
+      <td>
+        <div><span class="fa fa-2x fa-color-default pull-left">
+        <img src="https://osiris-26b00.firebaseapp.com/CareIQLogo.png" style="width:28px;height:28px;">
+        </span> <strong><font size="4">Current Availability</font></strong>
+        </div>
+        <div style="padding-top:20px;">
+          <iframe src="https://osiris-26b00.firebaseapp.com/dentalWidget/" allowfullscreen=""
+            style="width: 100%;height: 270px;border: 0px;background-color: white;padding: 0;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"
+            seamless="seamless" scrolling="no"></iframe>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+```
+
+### Sound Mental Health - Urgent Care Use Case
+Paste the html below wherever you want.
+
+http://www.kingcounty.gov/depts/health/locations/renton.aspx
+
+```
+<div>
+  <div>
+    <span class="fa fa-spin fa-circle-o-notch fa-2x fa-color-default pull-left"></span>
+    <span style="font-size: 1.4em; font-weight: 700;line-height:42px">Current Availability</span>
+  </div>
+  <br>
+  <iframe src="https://osiris-26b00.firebaseapp.com/waitTimeWidget/" allowfullscreen="" frameborder="0"
+    style="width: 100%; height: 82px;"></iframe>
+</div>
+```
+
+
+
+
 # Frontend Boilerplate with React, Redux & TypeScript
 
 A bare minimum react-redux-webpack-typescript boilerplate with TodoMVC example.
@@ -82,83 +170,6 @@ https://console.firebase.google.com/project/osiris-26b00/database/data/providers
 
 ```
 firebase deploy --only functions
-```
-
-# Live Demo
-
-## Waiting Room 
-The waiting room case would allow an employee to live update the waiting room availablity.  The updates would be reflected on a display in the waiting room or on a website hosting the display widget.
-
-### Controller
-https://osiris-26b00.firebaseapp.com/urgentcare
-
-### Display Dashboard
-https://osiris-26b00.firebaseapp.com/
-
-![Alt text](docs/waitingroom-dashboard.jpg?raw=true "Waiting Room Display Dashboard")
-### Display Widget
-https://osiris-26b00.firebaseapp.com/waitTimeWidget
-
-
-## Dental Office
-The dental office use case allows social services to update the availablity of dental clinic locations so patients know if the location is currently acccepting new patients and if there are appointments open.
-
-### Controller
-https://osiris-26b00.firebaseapp.com/dental
-
-### Display Widget
-https://osiris-26b00.firebaseapp.com/dentalWidget
-
-## How to Use Embeddable Widgets
-
-The code below describes how to embed widgets on host sites.  These widgets update in realtime and are hosted in iFrames.
-If you want to change the provider then you can pass a providerID on the query string using the provider key from Firebase.
-
-```
-https://osiris-26b00.firebaseapp.com/dentalWidget/?providerID=wa21156026a
-```
-
-### Renton Public Health - Dental Use Case
-Paste the html below into the site under the "Clients Served" section (after the closing ul tag but before the div tag for the left side section.
-
-http://www.kingcounty.gov/depts/health/locations/north/dental-clinic.aspx
-
-```
-<table class="table">
-  <tbody>
-    <tr>
-      <td>
-        <div><span class="fa fa-2x fa-color-default pull-left">
-        <img src="https://osiris-26b00.firebaseapp.com/CareIQLogo.png" style="width:28px;height:28px;">
-        </span> <strong><font size="4">Current Availability</font></strong>
-        </div>
-        <div style="padding-top:20px;">
-          <iframe src="https://osiris-26b00.firebaseapp.com/dentalWidget/" allowfullscreen=""
-            style="width: 100%;height: 270px;border: 0px;background-color: white;padding: 0;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"
-            seamless="seamless" scrolling="no"></iframe>
-        </div>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-```
-
-### Sound Mental Health - Urgent Care Use Case
-Paste the html below wherever you want.
-
-http://www.kingcounty.gov/depts/health/locations/renton.aspx
-
-```
-<div>
-  <div>
-    <span class="fa fa-spin fa-circle-o-notch fa-2x fa-color-default pull-left"></span>
-    <span style="font-size: 1.4em; font-weight: 700;line-height:42px">Current Availability</span>
-  </div>
-  <br>
-  <iframe src="https://osiris-26b00.firebaseapp.com/waitTimeWidget/" allowfullscreen="" frameborder="0"
-    style="width: 100%; height: 82px;"></iframe>
-</div>
 ```
 
 
