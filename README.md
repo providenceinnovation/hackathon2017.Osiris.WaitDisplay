@@ -8,15 +8,27 @@ The waiting room case would allow an employee to live update the waiting room av
 
 ### Controller
 https://osiris-26b00.firebaseapp.com/urgentcare
+
+***
+
 ![Alt text](docs/assets/WaitingRoom-Controller.png?raw=true "Waiting Room Controller")
+
+***
 
 ### Display Dashboard
 https://osiris-26b00.firebaseapp.com/
+
+***
+
 ![Alt text](docs/assets/WaitingRoom-Dashboard.png?raw=true "Waiting Room Display Dashboard")
+
+***
 
 ### Display Widget
 https://osiris-26b00.firebaseapp.com/waitTimeWidget
+
 ![Alt text](docs/assets/WaitingRoom-Widget.png?raw=true "Waiting Room Widget")
+***
 
 ## Dental Office
 The dental office use case allows social services to update the availablity of dental clinic locations so patients know if the location is currently acccepting new patients and if there are appointments open.
@@ -25,11 +37,21 @@ https://www.careiq.org/
 
 ### Controller
 https://osiris-26b00.firebaseapp.com/dental
+
+***
+
 ![Alt text](docs/assets/Dental-Controller.png?raw=true "Dental Controller")
+
+***
 
 ### Display Widget
 https://osiris-26b00.firebaseapp.com/dentalWidget
+
+***
+
 ![Alt text](docs/assets/Dental-Widget.png?raw=true "Dental Widget")
+
+***
 
 ## How to Use Embeddable Widgets
 
@@ -66,6 +88,12 @@ http://www.kingcounty.gov/depts/health/locations/north/dental-clinic.aspx
 
 ```
 
+***
+
+![Alt text](docs/assets/Dental-Widget-Example.png?raw=true "Dental Widget Example")
+
+***
+
 ### Sound Mental Health - Urgent Care Use Case
 Paste the html below wherever you want.
 
@@ -83,8 +111,11 @@ http://www.kingcounty.gov/depts/health/locations/renton.aspx
 </div>
 ```
 
+***
 
+![Alt text](docs/assets/WaitingRoom-Widget-Example.png?raw=true "Waiting Room Widget Example")
 
+***
 
 # Frontend Boilerplate with React, Redux & TypeScript
 
